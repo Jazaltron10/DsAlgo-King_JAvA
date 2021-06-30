@@ -10,7 +10,7 @@ public class Quiz {
         question += "D. Brazil\n";
         question += "E. Italy\n";
 
-
+        
         while (true){
         String answer = JOptionPane.showInputDialog(question);
         answer = answer.toUpperCase();

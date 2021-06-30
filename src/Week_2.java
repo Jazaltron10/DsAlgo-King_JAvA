@@ -1,6 +1,6 @@
 public class Week_2 {
     public static void main(String[] args) {
-        System.out.println("Discussion Assignment Unit 2");
+        System.out.println("Hello World-DA_UNIT_2");
         /*--PART 1---------------------------------------------------------------------------*/
         System.out.println("\n\n\nPart 1 -> THE DO WHILE LOOP");
         // The Do While Loop Example
