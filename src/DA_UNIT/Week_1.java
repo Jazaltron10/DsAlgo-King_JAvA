@@ -1,5 +1,7 @@
+package DA_UNIT;
 public class Week_1 {
         static void semantic_error() {
+            System.out.println("Hello World-DA_UNIT_1");
             //This program is meant to calculate the square of 5
             int square = 5 / 5;
             System.out.print("\n"+square);

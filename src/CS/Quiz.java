@@ -1,3 +1,4 @@
+package CS;
 import javax.swing.JOptionPane;
 
 public class Quiz {
