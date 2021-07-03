@@ -2,7 +2,7 @@ package Freestyles;
 
 import javax.swing.JOptionPane;
 
-public class freestyle_4 {
+public class Freestyle_4 {
 static int nQuestions = 0;  
 static int nCorrect = 0;
 

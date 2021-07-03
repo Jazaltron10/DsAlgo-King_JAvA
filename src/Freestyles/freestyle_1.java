@@ -3,7 +3,7 @@ package Freestyles;
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class freestyle_1 {
+public class Freestyle_1 {
     static void cat() {
         String name = "dasko";
         switch (name) {

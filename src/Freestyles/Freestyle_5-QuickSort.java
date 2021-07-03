@@ -1,7 +1,7 @@
 package Freestyles;
 import java.io.*;
 
-public class freestyle_5 {
+public class Freestyle_5 {
     // Java implementation of QuickSort
 
 

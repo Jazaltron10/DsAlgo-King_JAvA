@@ -3,7 +3,7 @@ package Freestyles;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class freestyle_2 {
+public class Freestyle_2 {
     static void Arrays() {
         /* Array Syntax -> int [] arr = new int [5]; */
         String[] myNames = { "a", "b", "c", "d", "e" };

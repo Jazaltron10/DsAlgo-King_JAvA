@@ -6,7 +6,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class freestyle_3 {
+public class Freestyle_3 {
     static void useArray(int[] a) {
         int j = 0;
         for (int i : a) {
