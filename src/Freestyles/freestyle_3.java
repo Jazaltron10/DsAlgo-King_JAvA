@@ -43,8 +43,8 @@ public class Freestyle_3 {
             while (values[right] < pivot) {
                 right--;
             }
-            if (left <= right) {
-                swap(values, left, right);
+            if (left <= right){
+                swap(values, right, left);
                 left++;
                 right--;
             }
@@ -54,9 +54,9 @@ public class Freestyle_3 {
     }
 
     public static void main(String[] args) {
-        int[] myNums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+        //int[] myNums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
 
-        useArray(myNums);
+        //useArray(myNums);
 
         int[] testValues = { 32, 100, 1, 2, 29, 28, 88, 3, 50, 67, 37, 1, 57, 20, 54, 62, 93, 17, 31, 65, 23, 32, 98,
                 20, 79, 69, 89, 26, 27, 22, 29, 100, 1, 2, 57, 28, 88, 3, 50, 67, 37, 1, 32, 20, 97 };

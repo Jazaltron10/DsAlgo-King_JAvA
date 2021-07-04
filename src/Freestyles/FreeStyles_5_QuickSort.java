@@ -1,11 +1,11 @@
 package Freestyles;
+
+// Java implementation of QuickSort
 import java.io.*;
 
-public class Freestyle_5 {
-    // Java implementation of QuickSort
 
 
-	
+public class FreeStyles_5_QuickSort {
 // A utility function to swap two elements
 static void swap(int[] arr, int i, int j)
 {
@@ -88,8 +88,5 @@ public static void main(String[] args)
 	System.out.println("Sorted array: ");
 	printArray(arr, n);
 }
-// This code is contributed by Ayush Choudhary
 }
-
-
-
+// This code is contributed by Ayush Choudhary
