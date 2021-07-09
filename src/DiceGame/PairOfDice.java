@@ -26,17 +26,17 @@ public class PairOfDice {
          */
         die1 = (int) (Math.random() * 6 + 1);
         die2 = (int) (Math.random() * 6 + 1);
-        System.out.println("\nRandom roll :-> "+die1+"  "+die2);
+        //System.out.println("\nRandom roll :-> "+die1+"  "+die2);
     }
 
-    public static void main(String[] args) {
-        PairOfDice dice = new PairOfDice(3, 4);
-        PairOfDice dice2 = new PairOfDice();
-        System.out.println("\n dice  :-> "+dice.die1+"  "+dice.die2);
-        System.out.println("\n dice2 :-> "+dice2.die1+"  "+dice2.die2);
-        System.out.println(" ");
-        dice.roll();
-        dice2.roll();
-    }
+    // public static void main(String[] args) {
+    //     PairOfDice dice = new PairOfDice(3, 4);
+    //     PairOfDice dice2 = new PairOfDice();
+    //     System.out.println("\n dice  :-> "+dice.die1+"  "+dice.die2);
+    //     System.out.println("\n dice2 :-> "+dice2.die1+"  "+dice2.die2);
+    //     System.out.println(" ");
+    //     dice.roll();
+    //     dice2.roll();
+    // }
 }
 
