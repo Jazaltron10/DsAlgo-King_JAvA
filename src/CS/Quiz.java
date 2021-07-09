@@ -27,7 +27,5 @@ public class Quiz {
         }
         }
         //System.out.println(question);
-
-
     }
 }

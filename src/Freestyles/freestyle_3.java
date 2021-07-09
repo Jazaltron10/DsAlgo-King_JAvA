@@ -1,65 +1,62 @@
 package Freestyles;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import javax.swing.JOptionPane;
 
 public class Freestyle_3 {
-    static void useArray(int[] a) {
-        int j = 0;
-        for (int i : a) {
-            // a[i] = a[i] * 2;
-            System.out.println(i * 2);
+static int nQuestions = 0;  
+static int nCorrect = 0;
+
+public static void main(String[] args) {
+    String question="Who is the founder of Facebook?\n";
+    question += "A. Larry Ellison\n";
+    question += "B. Bill Gates \n";
+    question += "C. Mark Zuckerberg \n";
+    question += "D. Jerry Yang \n";
+    question += "E. Thomas J. \n";
+    check(question, "C");
+    
+    String question2 = "Which of the following is fastest land animal?\n";
+    question2 +="A. Cheetah\n";
+    question2 +="B. Tiger\n";
+    question2 +="C. Kangaroo\n";
+    question2 +="D. Elephant\n";
+    question2 +="E. Sloth";
+    check(question2, "A");
+    
+    
+    String question3 = "What do the five rings on the Olympic symbol represent?\n";
+    question3 +="A. the five oceans\n";
+    question3 +="B. the five Greek Gods\n";
+    question3 +="C. the five planets\n";
+    question3 +="D. the five countries\n";
+    question3 +="E. the five continents";
+    check(question3, "E");
+    
+    JOptionPane.showMessageDialog(null,nCorrect+" correct out of "+nQuestions+" questions.");
+}    
+    
+static String ask(String question){
+String answer;
+while(true){
+    answer = JOptionPane.showInputDialog(question);
+    answer = answer.toUpperCase();
+    if(!(answer.equals("A") || answer.equals("B") || answer.equals("C") || answer.equals("D") || answer.equals("E"))) {
+        JOptionPane.showMessageDialog(null,"Invalid answer. Please enter A, B, C, D, or E.");
+    } 
+    else {
+        return answer;
         }
+    }
+} 
 
-        while (j < a.length) {
-            System.out.println("\n\n" + (a[j] + 10));
-            j++;
+static void check(String question, String correctAnswer){
+    nQuestions= nQuestions+1;
+    String answer = ask(question);
+    if(answer.equals(correctAnswer)){
+        nCorrect= nCorrect+1;
+        JOptionPane.showMessageDialog(null,"Correct!");
         }
-        System.out.println(Arrays.toString(a));
-    }
-
-    static void quicksort(int[] values) {
-        quicksort(values, 0, values.length - 1);
-    }
-
-    static void quicksort(int[] values, int left, int right) {
-        if (left > right) {
-            return;
-        }
-        int pivot = values[(left + right) / 2];
-        int index = partition(values, left, right, pivot);
-        quicksort(values, left, index - 1);
-        quicksort(values, index, right);
-    }
-
-    static int partition(int[] values, int left, int right, int pivot) {
-        while (left < right) {
-            while (values[left] < pivot) {
-                left++;
-            }
-            while (values[right] < pivot) {
-                right--;
-            }
-            if (left <= right){
-                swap(values, right, left);
-                left++;
-                right--;
-            }
-
-        }
-        return left;
-    }
-
-    public static void main(String[] args) {
-        //int[] myNums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-
-        //useArray(myNums);
-
-        int[] testValues = { 32, 100, 1, 2, 29, 28, 88, 3, 50, 67, 37, 1, 57, 20, 54, 62, 93, 17, 31, 65, 23, 32, 98,
-                20, 79, 69, 89, 26, 27, 22, 29, 100, 1, 2, 57, 28, 88, 3, 50, 67, 37, 1, 32, 20, 97 };
-        quicksort(testValues);
+        else
+            JOptionPane.showMessageDialog(null,"Incorrect. The correct answer is "+correctAnswer + " . "); 
     }
 }
