@@ -96,10 +96,10 @@ public class Quiz_3 {
                                 "Real Madrid", "Chelsea", "d");
                 question_19.check();
 
-                MultipleChoiceQuestion question_170 = new MultipleChoiceQuestion(
+                MultipleChoiceQuestion question_20 = new MultipleChoiceQuestion(
                                 "Q20. Who won the 2020 English Premier League", "Arsenal", "Liverpool",
                                 "Leicester City", "Manchester City", "Chelsea", "b");
-                question_170.check();
+                question_20.check();
 
                 MultipleChoiceQuestion.showResults();
 
