@@ -1,6 +1,6 @@
 package DA_UNIT.Week_5;
 
-public class SoftwareEngineer extends Human {
+public class SoftwareEngineer extends Person {
     private String specialization;
     private String role;
     private String company;

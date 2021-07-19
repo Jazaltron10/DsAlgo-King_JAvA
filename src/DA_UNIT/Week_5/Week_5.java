@@ -2,6 +2,28 @@ package DA_UNIT.Week_5;
 
 public class Week_5 {
         public static void main(String[] args) {
+                // Section for the Base Person Class:
+                // name , age
+                Person Africa = new Person("okon", 60);
+                Africa.introduction();
+                Africa.setFeatures("Chinedu", 26, 1.87, 86, "male", "Nigeria");
+                Africa.introduction();
+                Africa.getinfo();
+
+                // String name, int age, double height, int weight, String gender, String
+                // country
+                Person Europe = new Person("Bradley", 30, 1.83, 79, "male", "England");
+                Europe.getinfo();
+
+                Person Asia = new Person("Himawari", 22, 1.58, 63, "female", "Japan");
+                Asia.getinfo();
+
+                Person SouthAmerica = new Person("Gabriella", 19, 1.62, 70, "female", "Brazil");
+                SouthAmerica.getinfo();
+
+                Person NorthAmerica = new Person("George", 39, 1.66, 90, "male", "America");
+                NorthAmerica.getinfo();
+
                 // Section For Doctor Class:
                 // name, age, medicalField, employer, qualification, residency,
                 // YearsOfExperience
@@ -32,7 +54,7 @@ public class Week_5 {
                 WebDeveloper.getinfo();
                 WebDeveloper.Value();
 
-                Human MobileDeveloper = new SoftwareEngineer();
+                Person MobileDeveloper = new SoftwareEngineer();
                 ((SoftwareEngineer) MobileDeveloper).setFeatures("male", "Cristiano", 32, "Apple IOS",
                                 "Mobile Developer", "Apple", "$258,962", "ICT 3", 5);
                 ((SoftwareEngineer) MobileDeveloper).Bio();

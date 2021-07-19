@@ -1,6 +1,6 @@
 package DA_UNIT.Week_5;
 
-public class Doctor extends Human {
+public class Doctor extends Person {
     private String medicalField;
     private String employer;
     private String qualification;
@@ -65,4 +65,5 @@ public class Doctor extends Human {
         this.residency = residency;
         this.YearsOfExperience = YearsOfExperience;
     }
+    // public static void main(String[] args) {}
 }
