@@ -5,6 +5,7 @@ public class Human {
     protected double height;
     protected int weight;
     protected int age;
+    protected String gender;
 
     public Human(String name){
         System.out.println("\nMy name is "+ name +" and I am a human being");

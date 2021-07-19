@@ -25,7 +25,7 @@ public class Week_5 {
         Pharmacist.getinfo();
 
         // Section for the SoftwareEngineer Class
-        //
+        //(String gender, String name, int age, String specialization, String role, String company, String salary, String level
         SoftwareEngineer engineer = new SoftwareEngineer();
         engineer.introduction();
         // newName, newAge, newHeight, newWeight, newSpecialization, newRole,

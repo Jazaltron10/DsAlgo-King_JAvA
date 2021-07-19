@@ -1,7 +1,6 @@
 package DA_UNIT.Week_5;
 
 public class Doctor extends Human {
-    private String gender;
     private String medicalField;
     private String employer;
     private String qualification;
@@ -25,7 +24,7 @@ public class Doctor extends Human {
     public Doctor(String gender, String name, int age, String medicalField, String employer, String qualification,
             Boolean residency, int YearsOfExperience) {
         super(name, age);
-        this.gender = gender;
+        this.gender = gender;// protected variable from superclass
         this.medicalField = medicalField;
         this.employer = employer;
         this.qualification = qualification;
