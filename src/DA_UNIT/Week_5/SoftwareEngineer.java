@@ -8,31 +8,36 @@ public class SoftwareEngineer extends Human {
     private String level;
 
     // The 1st Constructor
-    public SoftwareEngineer() {
-        System.out.println("I am a SoftwareEngineer");
+    public SoftwareEngineer(String name) {
+        super(name);
+        System.out.println("\nMy name is "+ name +" and I am a SoftwareEngineer");
     }
 
     // The 2nd Constructor
-    public SoftwareEngineer(String level) {
+    public SoftwareEngineer(){
         // this is me using the this keyword in a constructor
-        this("John Doe", 25, "Web", "Front-end Engineer");
-        this.level = level;
+        //This constructor just uses the this keyword to call the 3rd constructor
+        // and if an object is created with this constructor it will have the default data below
+        this("John Doe", 25, "Web", "Front-End Engineer", "IBM", "$100,000", "L5");
     }
 
     // The 3rd Constructor
-    public SoftwareEngineer(String name, int age, String specialization, String role) {
+    public SoftwareEngineer(String name, int age, String specialization, String role, String company, String salary, String level) {
         // Using the Super keyword in the constructor of the subclass to call the
         // constructor of the superclass
         super(name, age);
         this.specialization = specialization;
         this.role = role;
+        this.company = company;
+        this.salary = salary;
+        this.level = level;
     }
 
     // A Setter method used to set the state of a newly created object
-    public void setFeatures(String newName, int newAge, double newHeight, int newWeight, String newSpecialization,
+    public void setFeatures(String newName, int newAge, String newSpecialization,
             String newRole, String newCompany, String newSalary, String newLevel) {
         // calling the setFeatures method of the superclass
-        super.setFeatures(newName, newAge, newHeight, newWeight);
+        super.setFeatures(newName, newAge);
         // changing the properties of the subclass with the this keyword
         this.specialization = newSpecialization;
         this.role = newRole;
@@ -46,26 +51,8 @@ public class SoftwareEngineer extends Human {
                 "\nName:-> " + name + "\nAge:-> " + age + "\nSpecialization:-> " + specialization + "\nRole:-> " + role
                         + "\nCompany:-> " + company + "\nSalary:-> " + salary + "\nLevel:-> " + level + "\n");
     }
+    public void getinfos(){
+        super.getinfo();
+}
 
-    public static void main(String[] args) {
-        SoftwareEngineer engineer = new SoftwareEngineer();
-        engineer.introduction();
-        // newName, newAge, newHeight, newWeight, newSpecialization, newRole,
-        // newCompany, newSalary, newLevel
-        engineer.setFeatures("jamie", 21, 1.9, 70, "web", "Front-end", "Microsoft", "$100,000", "5");
-        engineer.introduction();
-        engineer.getinfo();
-
-        Human engineer_2 = new SoftwareEngineer();
-        ((SoftwareEngineer) engineer_2).setFeatures("Karen", 29, 1.5, 70, "Mobile", "IOS", "Netflix", "$258,962", "K7");
-        ((SoftwareEngineer) engineer_2).getinfo();
-        engineer_2.introduction();
-
-        SoftwareEngineer engineer_3 = new SoftwareEngineer("Jonathan", 72, "DevOps", "SRE");
-        engineer_3.introduction();
-        engineer_3.role = "kasak";
-        System.out.println(engineer_3.role);
-        engineer_3.getinfo();
-
-    }
 }

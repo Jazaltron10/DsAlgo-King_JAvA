@@ -6,14 +6,8 @@ public class Human {
     protected int weight;
     protected int age;
 
-    public Human(){
-        System.out.println("\nI am a human");
-    }
-    public Human(String name,  int age, double height, int weight){
-        this.name = name;
-        this.age = age;
-        this.height = height;
-        this.weight = weight;
+    public Human(String name){
+        System.out.println("\nMy name is "+ name +" and I am a human being");
     }
     public Human(String name, int age){
         this.name = name;
@@ -26,9 +20,7 @@ public class Human {
         this.name = newName;
         this.age = newAge;
     }
-    public void setFeatures(String newName, int newAge, double newHeight, int newWeight) {
-        this.name = newName;
-        this.age = newAge;
+    public void setFeatures(double newHeight, int newWeight) {
         this.height = newHeight;
         this.weight = newWeight;
     }
@@ -37,11 +29,12 @@ public class Human {
     }
     
     public static void main(String[] args) {
-        // name , age, height , weight
-        Human Banker = new Human("okon", 60, 1.7 , 82);
+        // name , age
+        Human Banker = new Human("okon", 60);
         Banker.introduction();
-        Banker.setFeatures("John", 26, 1.87, 86);
+        Banker.setFeatures(1.87, 86);
         Banker.introduction();
         Banker.getinfo();
     }
 }
+
