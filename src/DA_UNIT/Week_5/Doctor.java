@@ -7,11 +7,11 @@ public class Doctor extends Human {
     private Boolean residency;
     private int YearsOfExperience;
 
-    Doctor() {
+    public Doctor() {
         System.out.println("I am a Doctor");
     }
 
-    Doctor(String name, int age, String medicalField, String employer, String qualification, Boolean residency,
+    public Doctor(String name, int age, String medicalField, String employer, String qualification, Boolean residency,
             int YearsOfExperience) {
         super(name, age);
         this.medicalField = medicalField;
@@ -21,16 +21,14 @@ public class Doctor extends Human {
         this.YearsOfExperience = YearsOfExperience;
     }
 
-    void getInfo() {
+    public void getInfo() {
         System.out.println("\nName:-> " + name + "\nAge:-> " + age + "\nMedical Field:-> " + medicalField
                 + "\nEmployer:-> " + employer + "\nQualification:->" + qualification + "\nResidency :-> " + residency
                 + "\n Years Of Experience:-> " + YearsOfExperience + "\n");
     }
 
-    void setFeatures(String name, int age, double height, int weight, 
-    
-    String medicalField, String employer,
-            String qualification, Boolean residency, int YearsOfExperience) {
+    public void setFeatures(String name, int age, double height, int weight, String medicalField, String employer,
+    String qualification, Boolean residency, int YearsOfExperience) {
         super.setFeatures(name, age, height, weight);
         this.medicalField = medicalField;
         this.employer = employer;
