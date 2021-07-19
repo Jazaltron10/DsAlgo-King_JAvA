@@ -44,9 +44,9 @@ public class SoftwareEngineer extends Human {
     public void Bio() {
             this.gender = this.gender.toUpperCase();
             if (this.gender.equals("MALE")) {
-                System.out.println("\n"+ name +" is a "+ role + " at " +company+", he has over " + YearsOfExperience + " years of experience building and maintaining applications for the " + specialization + "platform \n In all his years at "+ company + "," + name + " has risen to the level of " + level + " within the company's ranks and is admired by his coworkers for his strong leadership and technical skills, and because of how valuable he is to the " + company + " his total yearly compensation is about "+ salary + "." + "\nFor the past " + (YearsOfExperience - 3) + " years he has been focused on contributing to open source projects and mentoring young developers\n");
+                System.out.println("\n"+ name +" is a "+ role + " at " +company+", he has over " + YearsOfExperience + " years of experience building and maintaining applications for the " + specialization + " platform \nIn all his years at "+ company + ", " + name + " has risen to the level of " + level + " within the company's ranks.\nHe is admired by his coworkers for his strong leadership and technical skills, and because of how valuable he is to " + company + " his total yearly compensation is about "+ salary + "." + "\nFor the past " + (YearsOfExperience - 3) + " years he has been focused on contributing to open source projects and mentoring young developers");
             } else {
-                System.out.println("\n"+ name +" is a "+ role + " at " +company+", she has over " + YearsOfExperience + " years of experience building and maintaining applications for the " + specialization + "platform \n In all her years at "+ company + "," + name + " has risen to the level of " + level + " within the company's ranks and is admired by her coworkers for her strong leadership and technical skills, and because of how valuable she is to the " + company + " her total yearly compensation is about "+ salary + "." + "\nFor the past " + (YearsOfExperience - 3) + " years she has been focused on helping young female developers navigate the industry\n");
+                System.out.println("\n"+ name +" is a "+ role + " at " +company+", she has over " + YearsOfExperience + " years of experience building and maintaining applications for the " + specialization + " platform \nIn all her years at "+ company + ", " + name + " has risen to the level of " + level + " within the company's ranks.\nShe is admired by her coworkers for her strong leadership and technical skills, and because of how valuable she is to " + company + " her total yearly compensation is about "+ salary + "." + "\nFor the past " + (YearsOfExperience - 3) + " years she has been focused on helping young female developers navigate the industry");
             }
         }
 
@@ -56,8 +56,8 @@ public class SoftwareEngineer extends Human {
                         + "\nCompany:-> " + company + "\nSalary:-> " + salary + "\nLevel:-> " + level +"\nYears Of Experience:-> " + YearsOfExperience + "\n");
     }
 
-    public void Create(){
-        System.out.println("\n In the field of Software Engineering a software engineer that specializes in " + specialization + " in the role of "+ role + " Has the ability to create and maintain incredibly complex software applications, and that's why companies like "+ company + " value people like " + name + "\n");
+    public void Value(){
+        System.out.println("\nIn the field of Software Engineering a software engineer that specializes in " + specialization + ", in the role of "+ role + " \nHas the ability to create and maintain incredibly complex software applications, and that's why companies like "+ company + " value people like " + name + "\n");
     }
     // A Setter method used to set the state of a newly created object
     public void setFeatures(String newGender, String newName, int newAge, String newSpecialization, String newRole,
@@ -73,4 +73,5 @@ public class SoftwareEngineer extends Human {
         this.level = newLevel;
         this.YearsOfExperience = newYearsOfExperience;
     }
+    // public static void main(String[] args) {}
 }
