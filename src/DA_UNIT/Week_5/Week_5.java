@@ -72,5 +72,6 @@ public class Week_5 {
                 SoftwareEngineer AutomationEngineer = new SoftwareEngineer("male", "Jake Sully", 29, "AWS Cloud",
                                 "DevOps Engineer", "Netflix", "$506,788", "Senior Software Engineer", 10);
                 AutomationEngineer.getinfo();
+                AutomationEngineer.testingsuper();
         }
 }

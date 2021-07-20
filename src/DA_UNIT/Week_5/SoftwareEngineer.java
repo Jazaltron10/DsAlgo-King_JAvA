@@ -1,6 +1,7 @@
 package DA_UNIT.Week_5;
 
 public class SoftwareEngineer extends Person {
+    //private variables that can only be accessed within this class
     private String specialization;
     private String role;
     private String company;
@@ -28,8 +29,10 @@ public class SoftwareEngineer extends Person {
         // Using the Super keyword in the constructor of the subclass to call the
         // constructor of the superclass
         super(name, age);
-        super.gender = gender; // protected variable from superclass
+        // protected variable from superclass being accessed using the super keyword
+        super.gender = gender;
         super.YearsOfExperience = YearsOfExperience;
+        // private variable in the subclass being accessed using the this keyword
         this.specialization = specialization;
         this.role = role;
         this.company = company;
@@ -41,6 +44,7 @@ public class SoftwareEngineer extends Person {
 
     // The Bio Method
     public void Bio() {
+            // checking the gender of the objects before executing this method
             this.gender = this.gender.toUpperCase();
             if (this.gender.equals("MALE")) {
                 System.out.println("\n"+ name +" is a "+ role + " at " +company+", he has over " + YearsOfExperience + " years of experience building and maintaining applications for the " + specialization + " ecosystem \nIn all his years at "+ company + ", " + name + " has risen to the level of " + level + " within the company's ranks.\nHe is admired by his coworkers for his strong leadership and technical skills, and because of how valuable he is to " + company + " his total yearly compensation is about "+ salary + "." + "\nFor the past " + (YearsOfExperience - 3) + " years he has been focused on contributing to open source projects and mentoring young developers");
@@ -63,9 +67,10 @@ public class SoftwareEngineer extends Person {
             String newCompany, String newSalary, String newLevel, int newYearsOfExperience) {
         // calling the setFeatures method of the superclass
         super.setFeatures(newName, newAge);
-        // changing the properties of the subclass with the this keyword
+        // changing the variables of the superclass with the super keyword
         super.gender = newGender;
         super.YearsOfExperience = newYearsOfExperience;
+        // changing the properties of the subclass with the this keyword
         this.specialization = newSpecialization;
         this.role = newRole;
         this.company = newCompany;
@@ -74,20 +79,41 @@ public class SoftwareEngineer extends Person {
     }
 
     public void testingsuper() {
+        // only possible because base class variables are protected and not private
         super.name = "james";
         super.getinfo();
         this.name = "john";
         this.getinfo();
-
+        // this throws an error because the variable company does not exist in the superclass
+        // super.company = "jaha";
     }
     public static void main(String[] args) {
-        SoftwareEngineer AutomationEngineer = new SoftwareEngineer("male", "Jake Sully", 29, "AWS Cloud",
-        "DevOps Engineer", "Netflix", "$506,788", "Senior Software Engineer", 10);
-        AutomationEngineer.getinfo();
-        //AutomationEngineer.setFeatures("Jake Sully", 29, 1.86, 70, "male", "USA");
-        //AutomationEngineer.getinfo();
-        AutomationEngineer.testingsuper();
-        //AutomationEngineer.getinfo();
+                // Section for the SoftwareEngineer Class
+                // String gender, String name, int age, String specialization, String role,
+                // String company, String salary, String level
+                SoftwareEngineer WebDeveloper = new SoftwareEngineer("female", "Maya Kricko", 27, "Web DevelopMent",
+                                "Front-End Engineer", "Google", "$658,962", "L7", 10);
+                WebDeveloper.getinfo();
+                WebDeveloper.Value();
 
+                Person MobileDeveloper = new SoftwareEngineer();
+                ((SoftwareEngineer) MobileDeveloper).setFeatures("male", "Cristiano Ronaldo", 32, "Apple IOS",
+                                "Mobile Developer", "Apple", "$258,962", "ICT 3", 5);
+                ((SoftwareEngineer) MobileDeveloper).Bio();
+                ((SoftwareEngineer) MobileDeveloper).getinfo();
+                ((SoftwareEngineer) MobileDeveloper).Value();
+
+                SoftwareEngineer CloudEngineer = new SoftwareEngineer("male", "Mike Ross", 45, "Azure Cloud",
+                                "Cloud Architect", "Microsoft", "$872,650", "Partner", 15);
+                CloudEngineer.getinfo();
+
+                SoftwareEngineer TestingEngineer = new SoftwareEngineer("female", "Jasmine Neutron", 37, "Software Testing",
+                                "QA Engineer", "Facebook", "$396,802", "E5", 7);
+                TestingEngineer.getinfo();
+
+                SoftwareEngineer AutomationEngineer = new SoftwareEngineer("male", "Jake Sully", 29, "AWS Cloud",
+                                "DevOps Engineer", "Netflix", "$506,788", "Senior Software Engineer", 10);
+                AutomationEngineer.getinfo();
+                AutomationEngineer.testingsuper();
     }
 }
