@@ -24,12 +24,12 @@ public class Doctor extends Person {
     public Doctor(String gender, String name, int age, String medicalField, String employer, String qualification,
             Boolean residency, int YearsOfExperience) {
         super(name, age);
-        this.gender = gender;// protected variable from superclass
+        super.gender = gender;// protected variable from superclass
+        super.YearsOfExperience = YearsOfExperience;
         this.medicalField = medicalField;
         this.employer = employer;
         this.qualification = qualification;
         this.residency = residency;
-        this.YearsOfExperience = YearsOfExperience;
         // calling a method that prints out a brief bio for any doctor object created
         // with this constructor
         this.Bio();
@@ -56,14 +56,14 @@ public class Doctor extends Person {
     }
 
     // This is a Setter Method for changing the variables of any of the objects since they are private
-    public void setFeatures(String name, int age, String medicalField, String employer, String qualification,
-            Boolean residency, int YearsOfExperience) {
+    public void setFeatures(String newGender, String newname, int newage, String newmedicalField, String newemployer, String newqualification, Boolean newresidency, int newYearsOfExperience) {
         super.setFeatures(name, age);
-        this.medicalField = medicalField;
-        this.employer = employer;
-        this.qualification = qualification;
-        this.residency = residency;
-        this.YearsOfExperience = YearsOfExperience;
+        super.gender = newGender;
+        super.YearsOfExperience = newYearsOfExperience;
+        this.medicalField = newmedicalField;
+        this.employer = newemployer;
+        this.qualification = newqualification;
+        this.residency = newresidency;
     }
     // public static void main(String[] args) {}
 }

@@ -7,6 +7,7 @@ public class Person {
     protected int age;
     protected String gender;
     protected String country;
+    protected int YearsOfExperience;
 
     // This is the 1st constructor.
     public Person(String name){

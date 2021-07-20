@@ -1,7 +1,7 @@
 package CS.Week_5;
 
 public class Quiz_4 {
-    public static void main(String[] args) {
+        public static void main(String[] args) {
 
         Question question_1 = new MultipleChoiceQuestion(
                 "Q10. Three people have won the World Cup as a player and as a coach. Mario Zagallo, Didier Deschamps an.. can you name the third?",
