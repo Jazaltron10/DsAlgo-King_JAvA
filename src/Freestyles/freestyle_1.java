@@ -28,7 +28,7 @@ public class Freestyle_1 {
         // phonebills[12] = data.nextInt();
         float sum = 0, average;
         int i;
-        // scan.close();
+        scan.close();//shouldn't be closed 
         System.out.print("\n");
         for (i = 0; i < 12; i++) {
             System.out.print((i + 1) + "=>$");
