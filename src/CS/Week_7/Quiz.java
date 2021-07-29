@@ -3,7 +3,7 @@ package CS.Week_7;
 public class Quiz {
         public static void main(String[] args) {
 
-                /*Question question_1 = new MultipleChoiceQuestion(
+                Question question_1 = new MultipleChoiceQuestion(
                                 "Q1. Three people have won the World Cup as a player and as a coach. Mario Zagallo, Didier Deschamps an.. can you name the third?",
                                 " Vicente Del Bosque", " Duda", " Joachim Low", " Roberto Mancini", "Franz Beckenbauer",
                                 "e");
@@ -60,7 +60,7 @@ public class Quiz {
                 Question question_13 = new TrueFalseQuestion(
                                 "Q13. As of 2021 Gerd Muller's record goals of 40 still stands in the Bundesliga",
                                 "false");
-                question_13.check();*/
+                question_13.check();
 
                 Question question_14 = new TrueFalseQuestion("Q14. Cristiano Ronaldo Played For Manchester United",
                                 "true");
