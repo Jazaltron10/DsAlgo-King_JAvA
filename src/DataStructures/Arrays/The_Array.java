@@ -7,7 +7,9 @@ public class The_Array {
     static boolean dupp = false; // Assume there are no duplicates
     
     static void arrayRepublic_1(String... list) {
+        //Had to use list.length-1 because the conditional check on the last element will cause an ArrayIndexOutOfBoundsException
         for (int i = 0; i < list.length - 1; i++) {
+            // Checking to see if elements adjacent in an array are the same 
             if (list[i].equals(list[i + 1])) {
                 dupp = true;
                 System.out.println("This Array contains duplicates" + nLine);
@@ -208,9 +210,7 @@ public class The_Array {
         System.out.printf("%s%s", nLine, randomMonth);   
         
     }
-    static void dynamicArrays(){
-        
-    }
+
     public static void main(String[] args) {
         /*--------------------------------------------------------------------*/
         System.out.println("Hello World\n");
@@ -219,7 +219,7 @@ public class The_Array {
         String lines[]; // declaring the array
         lines = new String[] { "John", "James", "James", "Baldwin", "Johnson" };// Initializing the array
         String[] list_2 = new String[] { "Abraham", "Asher", "Christian" };
-        arrayRepublic_1(lines); // contains duplicates
+        arrayRepublic_1(lines); // contains adjacent duplicates
         arrayRepublic_1(list_2); // contains no duplicates
 
         /*--------------------------------------------------------------------*/
@@ -236,16 +236,18 @@ public class The_Array {
         /*--------------------------------------------------------------------*/
         // This Section is for the player Array example
         arrayRepublic_2();
+        
         /*--------------------------------------------------------------------*/
-        // This Section deals with the various array methods that are available in the
-        // Arrays class
+        // This Section deals with the various array methods that are available in the Arrays class
         arrayRepublic_3();
+        
         /*--------------------------------------------------------------------*/
         // This Section is for Exploring randomStrings with Arrays
         randomStrings();
+        
         /*--------------------------------------------------------------------*/
-        // This Section Deals With Dynamic Arrays
-        dynamicArrays();
+
+
     }
 }
 /*
