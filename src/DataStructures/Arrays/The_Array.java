@@ -1,7 +1,7 @@
 package DataStructures.Arrays;
 
 import java.util.Arrays;
-
+import java.util.Random;
 public class The_Array {
     static String nLine = "\n";
     static boolean dupp = false; // Assume there are no duplicates
@@ -180,9 +180,36 @@ public class The_Array {
             l-=1;
         }
 
+        String[] fonts;
+        fonts = new String[] {
+        "TimesNewRoman, FontWeight.BOLD, 20",
+        "Arial, FontWeight.BOLD, FontPosture.ITALIC, 28",
+        "Verdana, 32",
+        "40",
+        "Times New Roman, FontWeight.BOLD, FontPosture.ITALIC, 60"
+        };
+        Random rand = new Random();
+        //int upperBound = fonts.length;
+        String randomFont;
+        int fontIndex;
+        //randnextInt(fonts.length) Generates random numbers in the range 0 to fonts.length-1
+        fontIndex = rand.nextInt(fonts.length);
+        randomFont = fonts[fontIndex];
+        System.out.printf("%s %s%d", randomFont, nLine, fonts.length);
         
-
-
+        //Alternative one Liner technique
+        String randString = fonts[rand.nextInt(fonts.length)];
+        System.out.printf("%s%s", nLine, randString);   
+        
+        // Section for Name of Months of the Year
+        final String[]  monthName = { "January", "February", "March","April", "May", "June","July", "August", "September", "October", "November", "December" };
+        // generates random integer values from 0 - 11
+        String randomMonth = monthName[rand.nextInt(monthName.length)];
+        System.out.printf("%s%s", nLine, randomMonth);   
+        
+    }
+    static void dynamicArrays(){
+        
     }
     public static void main(String[] args) {
         /*--------------------------------------------------------------------*/
@@ -216,7 +243,9 @@ public class The_Array {
         /*--------------------------------------------------------------------*/
         // This Section is for Exploring randomStrings with Arrays
         randomStrings();
-
+        /*--------------------------------------------------------------------*/
+        // This Section Deals With Dynamic Arrays
+        dynamicArrays();
     }
 }
 /*
