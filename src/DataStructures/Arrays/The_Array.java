@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class The_Array {
     static String nLine = "\n";
-
+    static boolean dupp = false; // Assume there are no duplicates
+    
     static void arrayRepublic_1(String... list) {
-        boolean dupp = false; // Assume there are no duplicates
         for (int i = 0; i < list.length - 1; i++) {
             if (list[i].equals(list[i + 1])) {
                 dupp = true;
@@ -117,6 +117,7 @@ public class The_Array {
         int count = 0;
         int idNum = 0;
         String[] list = new String[10];
+        //Here i am using a for loop to fill the players in the array, instead of doing it manually like before.
         for (int i = 0; i < list.length - 7; i++) {
             list[i] = "player".toUpperCase().concat(" " + idNum++);
             count++;
@@ -154,7 +155,35 @@ public class The_Array {
         // can be used to get a copy of the int array A
 
     }
-    
+    static void randomStrings(){
+        String star = "";
+        for (int i = 0; i < 10;i++){
+            star += "+-";    
+            System.out.println(star);
+            /*for (int j = 0; j < 10;j++) {
+                star += "*";    
+                System.out.println(star);
+            }*/
+        }
+        
+        int u = 0;
+        String sign = "";
+        while (u < 10) {
+            sign += "o";
+            System.out.println(sign);
+            u+=1;
+        }
+        int l = 10;
+        while(l > 0){
+            //Using the string repeat method
+            System.out.println("T".repeat(l));
+            l-=1;
+        }
+
+        
+
+
+    }
     public static void main(String[] args) {
         /*--------------------------------------------------------------------*/
         System.out.println("Hello World\n");
@@ -184,6 +213,24 @@ public class The_Array {
         // This Section deals with the various array methods that are available in the
         // Arrays class
         arrayRepublic_3();
+        /*--------------------------------------------------------------------*/
+        // This Section is for Exploring randomStrings with Arrays
+        randomStrings();
 
     }
 }
+/*
+ * Section 3.8 - Introduction to Arrays
+ * Section 4.3.5 - Array Parameters
+ * Section 4.3.6 - Command-line Arguments
+ * Section 5.1.4 - Arrays and Objects
+ * Section 7.1 - Array Details (all)
+ * Section 7.2.1 - Some Processing Examples
+ * Section 7.2.2 - Some Standard Array Methods
+ * Section 7.3 - ArrayList (all but 7.3.4)
+ * Section 7.4 - Searching and Sorting (introduction)
+ * Section 7.4.1 - Searching
+ * Section 7.4.2 - Association Lists
+ * Section 7.5 - Two-dimensional Arrays (introduction)
+ * Section 7.5.1 - The Truth about 2D Arrays
+ */
