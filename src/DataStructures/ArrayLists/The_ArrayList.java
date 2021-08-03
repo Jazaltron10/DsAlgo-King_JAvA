@@ -36,7 +36,8 @@ public class The_ArrayList {
         // Wrapper classes are used for representing primitive type values as objects.
 
         Double d = Double.valueOf(6.02221415e23); // this is the preferable way of initializing a Double object
-        Double d1 = new Double(6.02221415e23);// this method has apparently been deprecated since java version 9
+        // Double d1 = new Double(6.02221415e23);// this method has apparently been
+        // deprecated since java version 9
         /*
          * They both do the same thing i.e they return an object of type Double That
          * wraps around the value of d and d1 which are of the primitive type double.
@@ -49,28 +50,27 @@ public class The_ArrayList {
 
         System.out.println(d);
         System.out.println(d.doubleValue());
-        System.out.println(d1);
+        // System.out.println(d1);
 
         // Autoboxing
         Integer answer = 42;
         // This actually silently gets converted
         // Integer answer = Integer.valueOf(42);
+        System.out.println(answer);
         /*
-         * This is what is known as autoboxing. This simply  is the automatic conversion of
-         * the value of a primitive type to an object belonging to its equivalent
+         * 
+         * This is what is known as autoboxing. This simply is the automatic conversion
+         * of the value of a primitive type to an object belonging to its equivalent
          * wrapper class, during the point of initialization or value setting.
          * Autoboxing occurs during write operations
          */
 
         ArrayList<Integer> numList = new ArrayList<Integer>();
         int count = 0;
-        for (int i = 0; i < 10; i++){
-            numList.add((count++)*10);
+        for (int i = 0; i < 10; i++) {
+            numList.add((count++) * 10);
         }
-        System.out.println(nline + numList );
-
-
-
+        System.out.println(nline + numList);
 
         // Unboxing
         Double d2 = Double.valueOf(3.142598);
