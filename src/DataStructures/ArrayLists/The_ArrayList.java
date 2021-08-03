@@ -56,11 +56,21 @@ public class The_ArrayList {
         // This actually silently gets converted
         // Integer answer = Integer.valueOf(42);
         /*
-         * This is what is known as autoboxing means It is the automatic conversion of
+         * This is what is known as autoboxing. This simply  is the automatic conversion of
          * the value of a primitive type to an object belonging to its equivalent
          * wrapper class, during the point of initialization or value setting.
          * Autoboxing occurs during write operations
          */
+
+        ArrayList<Integer> numList = new ArrayList<Integer>();
+        int count = 0;
+        for (int i = 0; i < 10; i++){
+            numList.add((count++)*10);
+        }
+        System.out.println(nline + numList );
+
+
+
 
         // Unboxing
         Double d2 = Double.valueOf(3.142598);
