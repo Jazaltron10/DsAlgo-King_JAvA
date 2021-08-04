@@ -2,7 +2,7 @@ package DA_UNIT;
 
 public class Week_4 {
 
-    /**
+    /*
      * Objects are Entities that have behaviours, that hold information, and that
      * can interact with one another.
      * 
