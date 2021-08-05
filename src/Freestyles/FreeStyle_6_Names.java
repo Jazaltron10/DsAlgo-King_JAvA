@@ -8,5 +8,7 @@ public class FreeStyle_6_Names {
 
         Integer[] a = new Integer[10];
         System.out.println(Arrays.toString(a));
+
+    
     }
 }

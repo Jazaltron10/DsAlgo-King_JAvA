@@ -11,7 +11,7 @@ public class The_ArrayList {
         ArrayList<String> namelist = new ArrayList<String>();
         namelist.add("John");
         namelist.add("James");
-        namelist.add("James");
+        namelist.add("Jamie");
         namelist.add("Mary");
         namelist.add("Martha");
         namelist.add("Steve");
