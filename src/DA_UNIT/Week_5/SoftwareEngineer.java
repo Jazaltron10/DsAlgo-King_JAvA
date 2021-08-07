@@ -1,5 +1,5 @@
 package DA_UNIT.Week_5;
-
+import java.util.*;
 public class SoftwareEngineer extends Person {
     //private variables that can only be accessed within this class
     private String specialization;
@@ -39,7 +39,7 @@ public class SoftwareEngineer extends Person {
         this.salary = salary;
         this.level = level;
         // calling a bio method for any object created with this constructor
-        this.Bio();
+        //this.Bio();
     }
 
     // The Bio Method
@@ -80,9 +80,12 @@ public class SoftwareEngineer extends Person {
 
     public void testingsuper() {
         // only possible because base class variables are protected and not private
-        super.name = "james";
+        super.name = "James Cameron";
+        super.height = 1.82;
+        super.weight = 81;
+        super.country = "Canada";
         super.getinfo();
-        this.name = "john";
+        this.name = "Kylian Romario";
         this.getinfo();
         // this throws an error because the variable company does not exist in the superclass
         // super.company = "jaha";
@@ -93,27 +96,49 @@ public class SoftwareEngineer extends Person {
                 // String company, String salary, String level
                 SoftwareEngineer WebDeveloper = new SoftwareEngineer("female", "Maya Kricko", 27, "Web DevelopMent",
                                 "Front-End Engineer", "Google", "$658,962", "L7", 10);
-                WebDeveloper.getinfo();
-                WebDeveloper.Value();
+                //WebDeveloper.getinfo();
+                //WebDeveloper.Value();
 
                 Person MobileDeveloper = new SoftwareEngineer();
                 ((SoftwareEngineer) MobileDeveloper).setFeatures("male", "Cristiano Ronaldo", 32, "Apple IOS",
                                 "Mobile Developer", "Apple", "$258,962", "ICT 3", 5);
-                ((SoftwareEngineer) MobileDeveloper).Bio();
-                ((SoftwareEngineer) MobileDeveloper).getinfo();
-                ((SoftwareEngineer) MobileDeveloper).Value();
+                //((SoftwareEngineer) MobileDeveloper).Bio();
+                //((SoftwareEngineer) MobileDeveloper).getinfo();
+                //((SoftwareEngineer) MobileDeveloper).Value();
 
                 SoftwareEngineer CloudEngineer = new SoftwareEngineer("male", "Mike Ross", 45, "Azure Cloud",
                                 "Cloud Architect", "Microsoft", "$872,650", "Partner", 15);
-                CloudEngineer.getinfo();
+                //CloudEngineer.getinfo();
 
                 SoftwareEngineer TestingEngineer = new SoftwareEngineer("female", "Jasmine Neutron", 37, "Software Testing",
                                 "QA Engineer", "Facebook", "$396,802", "E5", 7);
-                TestingEngineer.getinfo();
+                //TestingEngineer.getinfo();
 
                 SoftwareEngineer AutomationEngineer = new SoftwareEngineer("male", "Jake Sully", 29, "AWS Cloud",
                                 "DevOps Engineer", "Netflix", "$506,788", "Senior Software Engineer", 10);
-                AutomationEngineer.getinfo();
-                AutomationEngineer.testingsuper();
+                //AutomationEngineer.getinfo();
+                //AutomationEngineer.testingsuper();
+                
+                // Using An ArrayList to Manipulate all created Objects
+                ArrayList<Person> SWE = new ArrayList<Person>();
+                SWE.add(WebDeveloper);
+                SWE.add(MobileDeveloper);
+                SWE.add(CloudEngineer);
+                SWE.add(TestingEngineer);
+                SWE.add(AutomationEngineer);
+                int count = 0;
+                String tab = "\t";
+                for(Person item : SWE) {
+                    count++;
+                    System.out.printf("\n%s%s%s\n",tab.repeat(10),"Engineer ",count);
+                    ((SoftwareEngineer)item).Bio();
+                    item.getinfo();
+                    if(count == 1 || count == 2) {
+                        ((SoftwareEngineer)item).Value();
+                    }
+                    if(count == 5){
+                        ((SoftwareEngineer)item).testingsuper();
+                    }
+                }
     }
 }
