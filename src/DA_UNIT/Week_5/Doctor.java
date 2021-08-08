@@ -5,7 +5,7 @@ public class Doctor extends Person {
     private String employer;
     private String qualification;
     private Boolean residency;
-    private int YearsOfExperience;
+    // private int YearsOfExperience;
 
     // The 1st Constructor
     public Doctor(String name) {
