@@ -85,8 +85,6 @@ public class bSearchArrayList {
         return notfound;
     }
 
-    
-
     public static void main(String[] args) {
         ArrayList<Integer> list;
         list = List();
@@ -117,7 +115,7 @@ public class bSearchArrayList {
         // String[] alist;
         // alist = new String[]{"A", "B", "C", "D", "E", "F"};
         // int ano =
-        //bsch("B",alist);
+        // bsch("B",alist);
         // System.out.printf("%s%d",nline,ano);
     }
 }
