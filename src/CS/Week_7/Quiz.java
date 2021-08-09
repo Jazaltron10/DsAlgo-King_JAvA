@@ -67,7 +67,5 @@ public class Quiz {
                 question_14.check();
 
                 MultipleChoiceQuestion.showResults();
-
         }
-
 }

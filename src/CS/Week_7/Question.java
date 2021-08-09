@@ -9,15 +9,17 @@ public abstract class Question {
     QuestionDialog question;
     String correctAnswer;
 
-    public Question(String question){
+    public Question(String question) {
         this.question = new QuestionDialog();
-        this.question.setLayout(new GridLayout(0,1));
-        this.question.add(new JLabel("   "+question+"  ",JLabel.CENTER));
+        this.question.setLayout(new GridLayout(0, 1));
+        this.question.add(new JLabel("   " + question + "  ", JLabel.CENTER));
     }
+
     String ask() {
         question.setVisible(true);
         return question.answer;
     }
+
     void check() {
         String answer = ask();
         if (answer.equals(correctAnswer)) {
@@ -28,13 +30,14 @@ public abstract class Question {
         }
         nQuestions++;
     }
+
     void initQuestionDialog() {
         this.question.setModal(true);
         this.question.pack();
         this.question.setLocationRelativeTo(null);
     }
+
     static void showResults() {
         JOptionPane.showMessageDialog(null, nCorrect + " questions Correct out of " + nQuestions + " Questions");
     }
 }
-

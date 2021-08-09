@@ -16,13 +16,12 @@ public class MultipleChoiceQuestion extends Question {
         correctAnswer = correctAnswer.toUpperCase();
     }
 
-    void addChoice(String name, String label){
+    void addChoice(String name, String label) {
         JPanel choice = new JPanel(new BorderLayout());
         JButton button = new JButton(name);
         button.addActionListener(question);
-        choice.add(button,BorderLayout.WEST);
-        choice.add(new JLabel(label+" ",JLabel.LEFT),BorderLayout.CENTER);
+        choice.add(button, BorderLayout.WEST);
+        choice.add(new JLabel(label + " ", JLabel.LEFT), BorderLayout.CENTER);
         question.add(choice);
     }
-
 }
