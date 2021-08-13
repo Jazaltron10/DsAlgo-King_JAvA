@@ -24,8 +24,8 @@ public class Matrices {
             {2, -4, 8, 3},
             {4, -7, -6, 5}
         };
-        for (int row = 0; row < matrix.length; row++){
-            for (int column = 0; column < matrix.length+1; column++){
+        for (int row = 0; row < matrix.length; row++){// for each row
+            for (int column = 0; column < matrix.length+1; column++){// for each column in the row
                 System.out.println(matrix[row][column]);
             }
         }

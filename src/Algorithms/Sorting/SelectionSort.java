@@ -1,5 +1,7 @@
 package Algorithms.Sorting;
+
 import java.util.*;
+
 public class SelectionSort {
     static int[] selectionSort(int[] A) {
         // Sort A into increasing order, using selection sort
@@ -25,7 +27,7 @@ public class SelectionSort {
     }
 
     public static void main(String[] args) {
-        int[] a  = {2,3,4,68,2,1,8,6,4,2,43,42,6,23};
+        int[] a = { 2, 3, 4, 68, 2, 1, 8, 6, 4, 2, 43, 42, 6, 23 };
         System.out.println(Arrays.toString((selectionSort(a))));
     }
 }
