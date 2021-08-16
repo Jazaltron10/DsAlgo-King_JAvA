@@ -1,4 +1,5 @@
 package DataStructures.Arrays;
+// import java.lang.reflect.Array;
 import java.util.*;
 public class Matrices {
     /*
@@ -34,6 +35,10 @@ public class Matrices {
     static void PrintMatrix(int[][] matrix){
         System.out.println("\nThe value of the matrix is ");
         System.out.println(Arrays.deepToString(matrix));
+    }
+    static void PrintMatrixList(ArrayList<ArrayList<Integer>> matrix){
+        System.out.println("\nThe value of the matrix is ");
+        System.out.println(matrix);
     }
     static int[][] AddMatrix(){
         int row = 0;
@@ -88,14 +93,14 @@ public class Matrices {
          * They can only be multiplied
          * if A1[0].length == A2.length
          * 
-        */
-        /*
-         * A1.length = number of rows of first matrix 
-         * A1[0].length = number of columns of first matrix 
-         * A2.length = number of rows of second matrix 
-         * A2[0].length = number of columns of second matrix 
-         * rowOfFirst * columnOfSecond = newElement;
          */
+        /*
+        * A1.length = number of rows of first matrix 
+        * A1[0].length = number of columns of first matrix 
+        * A2.length = number of rows of second matrix 
+        * A2[0].length = number of columns of second matrix 
+        * rowOfFirst * columnOfSecond = newElement;
+        */
         int[][] newMatrix = new int[A1.length][A2[0].length];
         if(A1[0].length == A2.length){
             // newMatrix[0][0] = (A1[0][0] * A2[0][0]) + (A1[0][1] * A2[1][0]) + (A1[0][2] * A2[2][0]);
@@ -142,7 +147,33 @@ public class Matrices {
         
         return newMatrix;
     }
+    
+    static ArrayList<ArrayList<Integer>> MultidimensionalArrayList(){
+        ArrayList<ArrayList<Integer>> numList = new ArrayList<ArrayList<Integer>>();
+        for (int i = 0; i < 3; i++) {
+            numList.add(new ArrayList<>());
+        }
+        for (int i = 1 ; i <= 3 ; i++){
+            numList.get(0).add(i);
+            numList.get(1).add(i*2*7);
+            numList.get(2).add((i+15)*i);
+        }
 
+        int row = numList.size();
+        for (int i = 0; i < row; i++) {
+            int col = numList.get(i).size();
+            for (int j = 0; j < col; j++) {
+                System.out.printf("The value -> %d%n",numList.get(i).get(j));
+                Integer mainRow = i; // Autoboxing
+                Integer mainCol = j; // Autoboxing   
+                Integer mainVal = numList.get(i).get(j);
+                System.out.printf("Element at numList[%d][%d] is %d%n",mainRow,mainCol,mainVal);
+                // System.out.printf("Vertex %d is connected to vertex %d%n",mainRow,mainCol);
+            }
+            System.out.println(numList.get(i)+"\n\n");
+        }
+        return numList;
+    }
     public static void main(String[] args) {
         int[][] M1 = M1();
         //System.out.println(Arrays.deepToString(M1));
@@ -167,15 +198,9 @@ public class Matrices {
         int[][] M6 = TwoMatrixMultiplication(A3,A4);
         PrintMatrix(M6);
         
-        
-        // int[][] A2 = new int[][] {{1},{3},{6}};
-        // System.out.println(A2[0][0]);
-        // int[][] A1 = new int[][] {{4,7,6},{2,3,1}};
-        // int[][] A2 = new int[][] {{8},{5},{9}};
-        // int[][] newMatrix = new int[2][1];
-        // System.out.println(((A1[0][0]) * (A2[0][0])) + ((A1[0][1]) * (A2[0][1])));
-        // System.out.println((A2[1][0]));
-        // + ((A1[0][2]) * (A2[0][2]))
+        ArrayList<ArrayList<Integer>> maica;
+        maica = MultidimensionalArrayList();
+        PrintMatrixList(maica);
     }
 }
 /**
