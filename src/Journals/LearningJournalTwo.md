@@ -109,17 +109,23 @@ We can visualize this recursive fibonacci function as a tree. Each subsequent ca
 ***Personal Breakdown***
     
     A level is just a collection of nodes that are the same distance from the root node.
+
+
     if we have a recursive function that takes in an integer N and makes multiple calls(branches) lets say two calls in its initial call(root node).
     
     Its call stack exist in levels and anytime we go down a level starting from the root node(first function call), the total amount of nodes or branches or function calls on subsequent levels doubles.
+
+
     if lets say the first level that contains the first call is 
     f(N) -> level 0, this makes two function calls 
     f(N)+f(N) -> level 1, each of these function calls makes two function calls, and this continues until we reach the base case.
 
-    So in summary we know that whenever we call the top level function(or root node) for the recursive function, we know that we'll have just one node at the top level(i.e. level 0), 
-    and to get the amount of nodes for the next level, we'll just multiply by the number of branches the root node has, and to get the amount of nodes on the next level(i.e level 2) we'll multiply the total amount of nodes on the previous level by 2 again and this goes on for N number of times, this is because the number of levels(height) in the tree is N.
+
+    So in summary we know that whenever we call the top level function(or root node) for the recursive function, we know that we'll have just one node at the top level(i.e. level 0), and to get the amount of nodes for the next level, we'll just multiply by the number of branches the root node has, and to get the amount of nodes on the next level(i.e level 2) we'll multiply the total amount of nodes on the previous level by 2 again and this goes on for N number of times, this is because the number of levels(height) in the tree is N.
+
 
     To get the total number of nodes or the total number of calls a recursive function would make, we'll just take the number of nodes(or function calls) on the top level function(In this case and most cases, it is 2) and multiply it by itself, about N number of times.
+
 
     therefore if lets say N is 5 and there are 2 recursive function calls in the top level function, then the time complexity, would be 
     1*2*2*2*2 -> 2^5

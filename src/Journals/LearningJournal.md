@@ -87,11 +87,14 @@
 #### You can think of the space complexity of an algorithm like this:
     An algorithm is a step by step process used to accomplish a given task on a data set. Now the space complexity of an algorithm 
     attempts to keep track of the amount of memory required by the algorithm to be fully executed.
+
+
     Take for example a recursive algorithm used to sum up a series of number, each subsequent call to the function takes up space in the memory.
     These recursive calls to the function, just simply means that for each call to the function a new space in memory is allocated for computation. so therefore the space complexity for this algorithm is O(n)
 <br>
 
-    However this isn't always the case, just because there are n calls total doesn't mean it takes O(n) space. So consider the function below, which adds adjacent elements between 0 and n.
+    However this isn't always the case, just because there are n calls total doesn't mean it takes O(n) space. 
+    So consider the function below, which adds adjacent elements between 0 and n.
 
     static int pairSumSequence(int n){
         int sum = 0;
@@ -106,13 +109,17 @@
     }
 <br>
 
-    Since the conditional upper boundof the loop is n, it just means that there will be roughly n number of calls to the function pairSum. 
+    Since the conditional upper boundof the loop is n, it just means that there will be roughly n number of calls to the function pairSum.
+
     But as you can see each subsequent resulting call to the function is stored in the variables sum, and what this means is that these calls do not exist simultaneously on the call stack, so we'll only need O(1)space.
+    
     We can also observe that the execution of this algorithm does not take up any extra memory during excution.
 
 #### <b>Further Breakdown</b>
     When the algorithm starts getting executed there are already predefined variables which take up memory already.
+
     In the for loop the value of the variable sum is constantly being overwritten each time through the loop by adding the result gotten from calls to the pairSum function.
+    
     Because the call to the pairSum function only exist one at a time and not all at once no new or extra memory is used up during the entire execution of this algorithm and this is why it has a space complexity of O(1).
 
 <br>
