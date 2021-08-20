@@ -1,4 +1,4 @@
-package DataStructures.Arrays;
+
 // import java.lang.reflect.Array;
 import java.util.*;
 public class Matrices {
@@ -37,6 +37,14 @@ public class Matrices {
         System.out.println(Arrays.deepToString(matrix));
     }
     static void PrintMatrixList(ArrayList<ArrayList<Integer>> matrix){
+        System.out.println("\nThe value of the matrix is ");
+        System.out.println(matrix);
+    }
+    static void PrintThreeDimensionalMatrixList(ArrayList<ArrayList<ArrayList<Integer>>> matrix){
+        System.out.println("\nThe value of the matrix is ");
+        System.out.println(matrix);
+    }
+    static void PrintThreeDMatrixList(ArrayList<ArrayList<ArrayList<String>>> matrix){
         System.out.println("\nThe value of the matrix is ");
         System.out.println(matrix);
     }
@@ -174,6 +182,52 @@ public class Matrices {
         }
         return numList;
     }
+    static ArrayList<ArrayList<ArrayList<Integer>>> ThreeDimensionalArrayList(){
+        ArrayList<ArrayList<ArrayList<Integer>>> space = new ArrayList<ArrayList<ArrayList<Integer>>>();
+        for (int i = 0; i < 3; i++) {
+            space.add(new ArrayList<ArrayList<Integer>>());
+            for (int j = 0; j < 3; j++) {
+                space.get(i).add(new ArrayList<Integer>());
+            }
+        }
+        for (int i = 0 ; i < 3 ; i++){
+            for (int j = 0; j < 3; j++) {
+                space.get(0).get(i).add(j+9*i/2);
+                space.get(1).get(i).add(j*2*7+i);
+                space.get(2).get(i).add((j+15)*i);
+            }
+        }
+        
+        
+        
+        
+        return space;
+    }
+    static ArrayList<ArrayList<ArrayList<String>>> ThreeDArrayList(Random john){
+        ArrayList<ArrayList<ArrayList<String>>> space = new ArrayList<ArrayList<ArrayList<String>>>();
+        int x_axis_length = 3;
+        int y_axis_length = 3;
+        int z_axis_length = 3;
+
+        for (int i = 0; i < x_axis_length; i++) {
+            space.add(new ArrayList<ArrayList<String>>(y_axis_length));
+            for (int j = 0; j < y_axis_length; j++) {
+                space.get(i).add(new ArrayList<String>(z_axis_length));
+            }
+        }
+        int rate = john.nextInt(105);
+        int gate = john.nextInt(105);
+        int bate = john.nextInt(105);
+        for (int i = 0 ; i < 3 ; i++){
+            for (int j = 0; j < 3; j++) {
+                space.get(i).get(j).add("Red "+""+  (rate*i*i));
+                space.get(i).get(j).add("Blue "+""+ (bate*j*j));
+                space.get(i).get(j).add("Green "+""+(gate+i*j));
+            }
+        }
+
+        return space;
+    }
     public static void main(String[] args) {
         int[][] M1 = M1();
         //System.out.println(Arrays.deepToString(M1));
@@ -201,6 +255,15 @@ public class Matrices {
         ArrayList<ArrayList<Integer>> maica;
         maica = MultidimensionalArrayList();
         PrintMatrixList(maica);
+        Random rand = new Random();
+        ArrayList<ArrayList<ArrayList<String>>> bayco;
+        bayco = ThreeDArrayList(rand);
+        PrintThreeDMatrixList(bayco);
+        
+        ArrayList<ArrayList<ArrayList<Integer>>> Jayco;
+        Jayco = ThreeDimensionalArrayList();
+        PrintThreeDimensionalMatrixList(Jayco);
+        System.out.println(rand.nextInt(20));
     }
 }
 /**
