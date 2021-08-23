@@ -1,4 +1,3 @@
-package CS.Week_7;
 
 import javax.swing.*;
 

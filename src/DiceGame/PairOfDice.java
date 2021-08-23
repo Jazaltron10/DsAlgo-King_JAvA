@@ -1,4 +1,4 @@
-package DiceGame;
+// package DiceGame;
 
 public class PairOfDice {
     int die1; // Number showing on the first die

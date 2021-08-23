@@ -1,4 +1,4 @@
-package DA_UNIT.Week_6;
+package Week_6;
 
 import java.awt.event.*;
 import javax.swing.*;

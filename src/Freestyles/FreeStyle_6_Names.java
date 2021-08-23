@@ -1,4 +1,4 @@
-package Freestyles;
+// package Freestyles;
 import java.util.*;
 public class FreeStyle_6_Names {
     public static void main(String[] args) {

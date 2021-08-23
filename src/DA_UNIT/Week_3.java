@@ -1,4 +1,3 @@
-package DA_UNIT;
 
 public class Week_3 {
     static void FormalParameters(int shake, String bake) {

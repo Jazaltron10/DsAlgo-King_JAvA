@@ -1,4 +1,4 @@
-package Freestyles;
+// package Freestyles;
 public class Freestyle_4 {
     public static void main(String[] args) {
         String x = "james";

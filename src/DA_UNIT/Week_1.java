@@ -1,4 +1,4 @@
-package DA_UNIT;
+
 public class Week_1 {
         static void semantic_error() {
             System.out.println("Hello World-DA_UNIT_1");

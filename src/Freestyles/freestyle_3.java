@@ -1,4 +1,4 @@
-package Freestyles;
+// package Freestyles;
 
 import javax.swing.JOptionPane;
 

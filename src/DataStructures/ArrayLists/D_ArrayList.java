@@ -87,6 +87,8 @@ public class D_ArrayList {
         System.out.println("Hello World");
         Lister(rand);
         wrapperClasses();
+        String x = " "+24+32;
+        System.out.println(x);  
     }
 }
 

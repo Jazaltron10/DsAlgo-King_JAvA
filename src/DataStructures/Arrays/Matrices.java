@@ -18,20 +18,7 @@ public class Matrices {
      * Arrayname[row][column] = a[2][3];
      */
     
-    
-    static int[][] M1(){
-        int[][] matrix = new int[][]{
-            {6, -5, 1, 3},
-            {2, -4, 8, 3},
-            {4, -7, -6, 5}
-        };
-        for (int row = 0; row < matrix.length; row++){// for each row
-            for (int column = 0; column < matrix.length+1; column++){// for each column in the row
-                System.out.println(matrix[row][column]);
-            }
-        }
-        return matrix;
-    }
+    // THIS SECTION PRINTS ALL THE DIFFERENT TYPES OF MATRIX
     static void PrintMatrix(int[][] matrix){
         System.out.println("\nThe value of the matrix is ");
         System.out.println(Arrays.deepToString(matrix));
@@ -47,6 +34,21 @@ public class Matrices {
     static void PrintThreeDMatrixList(ArrayList<ArrayList<ArrayList<String>>> matrix){
         System.out.println("\nThe value of the matrix is ");
         System.out.println(matrix);
+    }
+    // END OF PRINT SECTION
+
+    static int[][] M1(){
+        int[][] matrix = new int[][]{
+            {6, -5, 1, 3},
+            {2, -4, 8, 3},
+            {4, -7, -6, 5}
+        };
+        for (int row = 0; row < matrix.length; row++){// for each row
+            for (int column = 0; column < matrix.length+1; column++){// for each column in the row
+                System.out.println(matrix[row][column]);
+            }
+        }
+        return matrix;
     }
     static int[][] AddMatrix(){
         int row = 0;
@@ -144,7 +146,7 @@ public class Matrices {
                         newMatrix[row][col++] = (A1[row][0]*A2[0][j])+(A1[row][1]*A2[1][j]);
                         j++;
                     }
-                    // [[18, 29, 43, 31], [30, 43, 62, 44], [32, 32, 41, 27]]
+                    //OUTPUT -> [[18, 29, 43, 31], [30, 43, 62, 44], [32, 32, 41, 27]]
                 }
             }
         }
@@ -156,6 +158,7 @@ public class Matrices {
         return newMatrix;
     }
     
+    // UNDERSTANDING HOW TO WORK WITH THE TWO DIMENSIONAL DYNAMIC ARRAY
     static ArrayList<ArrayList<Integer>> MultidimensionalArrayList(){
         ArrayList<ArrayList<Integer>> numList = new ArrayList<ArrayList<Integer>>();
         for (int i = 0; i < 3; i++) {
@@ -172,9 +175,9 @@ public class Matrices {
             int col = numList.get(i).size();
             for (int j = 0; j < col; j++) {
                 System.out.printf("The value -> %d%n",numList.get(i).get(j));
-                Integer mainRow = i; // Autoboxing
-                Integer mainCol = j; // Autoboxing   
-                Integer mainVal = numList.get(i).get(j);
+                Integer mainRow = i; // Autoboxing -> PUTTING PRIMITIVE IN WRAPPER CLASS
+                Integer mainCol = j; // Autoboxing -> PUTTING PRIMITIVE IN WRAPPER CLASS 
+                Integer mainVal = numList.get(i).get(j); // -> GETTING ALL THE VALUES IN THE ARRAY 
                 System.out.printf("Element at numList[%d][%d] is %d%n",mainRow,mainCol,mainVal);
                 // System.out.printf("Vertex %d is connected to vertex %d%n",mainRow,mainCol);
             }
@@ -182,12 +185,14 @@ public class Matrices {
         }
         return numList;
     }
+    
+    // UNDERSTANDING THE THREEDIMENSIONAL ARRAYS 
     static ArrayList<ArrayList<ArrayList<Integer>>> ThreeDimensionalArrayList(){
         ArrayList<ArrayList<ArrayList<Integer>>> space = new ArrayList<ArrayList<ArrayList<Integer>>>();
         for (int i = 0; i < 3; i++) {
-            space.add(new ArrayList<ArrayList<Integer>>());
+            space.add(new ArrayList<ArrayList<Integer>>()); // ADDING 2-D ARRAY TO THE 3-D ARRAY
             for (int j = 0; j < 3; j++) {
-                space.get(i).add(new ArrayList<Integer>());
+                space.get(i).add(new ArrayList<Integer>()); // ADDING 1-D ARRAY TO THE 2-D ARRAY
             }
         }
         for (int i = 0 ; i < 3 ; i++){
@@ -197,12 +202,9 @@ public class Matrices {
                 space.get(2).get(i).add((j+15)*i);
             }
         }
-        
-        
-        
-        
         return space;
     }
+    // A THREE DIMENSIONAL DYNAMMIC ARRAY, MIMICKING THE RGB DISTRIBUTION ON A SCREEN
     static ArrayList<ArrayList<ArrayList<String>>> ThreeDArrayList(Random john){
         ArrayList<ArrayList<ArrayList<String>>> space = new ArrayList<ArrayList<ArrayList<String>>>();
         int x_axis_length = 3;
@@ -225,7 +227,6 @@ public class Matrices {
                 space.get(i).get(j).add("Green "+""+(gate+i*j));
             }
         }
-
         return space;
     }
     public static void main(String[] args) {

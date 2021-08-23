@@ -1,4 +1,4 @@
-package CS.Week_7;
+
 
 public class Quiz {
         public static void main(String[] args) {
@@ -66,6 +66,6 @@ public class Quiz {
                                 "true");
                 question_14.check();
 
-                MultipleChoiceQuestion.showResults();
+                MultipleChoiceQuestionWeekFour.showResults();
         }
 }

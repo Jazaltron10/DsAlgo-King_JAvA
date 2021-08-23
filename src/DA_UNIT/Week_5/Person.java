@@ -1,4 +1,4 @@
-package DA_UNIT.Week_5;
+package Week_5;
 
 public class Person {
     protected String name;

@@ -1,4 +1,4 @@
-package DiceGame;
+// package DiceGame;
 
 public class RollTwoPairs {
     public static void main(String[] args) {
