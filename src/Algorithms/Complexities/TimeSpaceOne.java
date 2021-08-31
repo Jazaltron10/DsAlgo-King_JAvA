@@ -15,6 +15,8 @@ public class TimeSpaceOne {
     /**
      * using a memo to store fibonacci numbers in order to
      * speed up the computation of larger fibonacci numbers.
+     * This reduces the time complexity to that of O(n) 
+     * instead of O(n^2)
      */
     static Map<Double,Double> memo = new HashMap<>();
     static double fibonacci(double n){
@@ -71,6 +73,6 @@ public class TimeSpaceOne {
         for(double item : Grids){
             gridPrinter(item);
         }
-        System.out.println("\n" + Grids);
+        System.out.println("\n\n" + Grids);
     }
 }
