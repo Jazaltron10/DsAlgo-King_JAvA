@@ -92,13 +92,16 @@ public class BinaryTree {
 		int NumofNodes = countNodes(tree.root);
 		System.out.println("\n"+NumofNodes+"\n"); 
 		
-		System.out.printf("\n\n\nThis is a preorder traversal of the binary tree, root is printed first followed by items in the left side of the tree and then items in the right side of the tree%n"); 
+		//This is a preorder traversal of the binary tree, root is printed first followed by items in the left side of the tree and then items in the right side of the tree
+		System.out.printf("\n\n\n{PREORDER}<--> 1st -> Root : 2nd -> left subtree : 3rd -> right subtree%n"); 
 		tree.preorderPrint(tree.root);
-
-		System.out.printf("\n\n\nThis is a postorder traversal of the binary tree, items in the left side of the tree are printed first, followed by items in the right side of the tree and then the item in the root is printed last%n"); 
+		
+		//This is a postorder traversal of the binary tree, items in the left side of the tree are printed first, followed by items in the right side of the tree and then the item in the root is printed last
+		System.out.printf("\n\n\n{POSTORDER}<--> 1st -> left subtree : 2nd -> right subtree : 3rd -> Root%n");
 		postorderPrint(tree.root);
 		
-		System.out.printf("\n\n\nThis is an inorder traversal of the binary tree, items in the left side of the tree are printed first, followed by items in the root nodeand then items in the right subtree is printed last%n"); 
+		//This is an inorder traversal of the binary tree, items in the left side of the tree are printed first, followed by items in the root node and then items in the right subtree is printed last 
+		System.out.printf("\n\n\n{INORDER}<--> 1st -> left subtree : 2nd -> Root : 3rd -> right subtree%n");
 		inorderPrint(tree.root);
 
 	} // END MAIN
