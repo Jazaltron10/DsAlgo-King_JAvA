@@ -14,8 +14,8 @@ public class TimeSpaceTwo {
     }
     public static void main(String[] args) {
         int [] arr = new int[]{ 1, 2, 3, 4,5,6,7, 8,9};
-        // System.out.println(nline + Arrays.toString(arr)+ nline);
-        // reverse(arr);
+        System.out.println(nline + Arrays.toString(arr)+ nline);
+        reverse(arr);
 
         int [] ads = new int[] {11,20,93,86,78,63,49,27,31,64,22};
         System.out.println(Arrays.toString(ads));
