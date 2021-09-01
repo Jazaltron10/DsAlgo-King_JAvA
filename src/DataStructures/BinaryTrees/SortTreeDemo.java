@@ -67,7 +67,6 @@ public class SortTreeDemo {
         }  // end while
 
         System.out.println("\n\nExiting program.");
-
     }  // end main()
 
 

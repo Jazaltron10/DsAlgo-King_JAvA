@@ -53,7 +53,7 @@ public class BinaryTree {
 		tree.root.left.left = new Node(4);
 		/*
 		* 4 becomes left child of 2
-		*  				1 
+		*  					1 
 		* 				/ 		\ 
 		* 			 2    			3 
 		* 		  /	    \ 		 /     \ 
@@ -151,7 +151,7 @@ public class BinaryTree {
 
 	
 	// INORDER TRAVERSAL -------------------------------->
-	/**
+	/*
 	 * Print all the items in the tree to which root points. The items in the left
 	 * subtree are printed first, followed by the item in the root node and then the
 	 * items in the right subtree.
