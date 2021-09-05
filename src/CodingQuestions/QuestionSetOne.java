@@ -36,32 +36,83 @@ public class QuestionSetOne {
         System.out.println(sparr);
         return -1;
     }
-    
-    public static void main(String[] args) {
-        int[] numlist = new int[10];
-        int[] twonums = new int[2];
-        Random rand = new Random();
-        int randnum = rand.nextInt(21);
-        for (int i = 0; i<numlist.length; i++) {
-            numlist[i] = i * randnum;
+    public static Boolean palindrome(String word){
+        // This has O(n) time and O(n)space
+        String rev = "";
+        int j = word.length()-1;
+        for(int i=0; i < word.length() ; i++){
+            // System.out.println(Name.charAt(i));
+            // System.out.println(Name.charAt(j));
+            rev += word.charAt(j);
+            j--;
         }
-        // System.out.println(Arrays.toString(numlist));
-        // System.out.println("\n"+ randnum);
-        // twonums = TwoNumberSum(numlist, randnum);
-        int[] numlist_2 = new int[] {3,5,-4,8,11,1,-1,6};
-        System.out.println(Arrays.toString(numlist_2));
-        twonums = TwoNumberSum(numlist_2, 20);
-        System.out.println("\n"+Arrays.toString(twonums));
+        System.out.printf("\n%s%n%s", rev, word);
+        System.out.println("\n");
+        if (rev.equals(word)){
+            System.out.println("\nThis is a Palindrome");
+            return true;
+        }
+        else{
+            System.out.println("\nThis is not a Palindrome");
+            return false;
+        }
+    }
+        
+        public static Boolean palindromeTwo(String word){
+            // This has O(n) time and O(1) space
+            int j = word.length()-1;
+            for(int i = 0; i < word.length() ; i++, j--){
+                if(word.charAt(i) != word.charAt(j)){
+                    return false;
+                }
+            }
+            return true;
+        }
+        public static void main(String[] args) {
+            // TWO NUMBER SUM
+            int[] numlist = new int[10];
+            int[] twonums = new int[2];
+            Random rand = new Random();
+            int randnum = rand.nextInt(21);
+            for (int i = 0; i<numlist.length; i++) {
+                numlist[i] = i * randnum;
+            }
+            // System.out.println(Arrays.toString(numlist));
+            // System.out.println("\n"+ randnum);
+            // twonums = TwoNumberSum(numlist, randnum);
+            int[] numlist_2 = new int[] {3,5,-4,8,11,1,-1,6};
+            System.out.println(Arrays.toString(numlist_2));
+            twonums = TwoNumberSum(numlist_2, 20);
+            System.out.println("\n"+Arrays.toString(twonums));
+            
+            // PRODUCT SUM
+            // ProductSum();
+            // totalsum();
+            System.out.println(1+2+3+4+5+6+7+8+9);
+            
+            
+            
+            // PALINDROME
+            Boolean check = palindrome("abcdcba");
+            System.out.println(check);
+            Boolean check_1 = palindrome("jonathan");
+            System.out.println(check_1);
 
-        ProductSum();
-        totalsum();
-        System.out.println(1+2+3+4+5+6+7+8+9);
-    }
-    static void totalsum(){
-        int sum = 0;
-        for (int i = 1; i < 10; i++){
-            sum +=i;
-            System.out.println(sum);
+            System.out.println("\n\n\n");
+            
+            Boolean check_2 = palindromeTwo("jonathan");
+            System.out.println(check_2);
+            Boolean check_3 = palindromeTwo("abba");
+            System.out.println(check_3);
         }
-    }
+
+
+        
+    //     static void totalsum(){
+    //         int sum = 0;
+    //         for (int i = 1; i < 10; i++){
+    //             sum +=i;
+    //             System.out.println(sum);
+    //         }
+    // }
 }
