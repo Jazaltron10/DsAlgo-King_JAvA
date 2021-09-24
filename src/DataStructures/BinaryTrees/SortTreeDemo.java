@@ -41,7 +41,7 @@ public class SortTreeDemo {
         System.out.println("are displayed.  The number of nodes in the tree is also output.");
         System.out.println("    Any string you enter will be converted to lower case.");
         System.out.println("Duplicate entries are ignored.");
-
+        in.close();
         while (true) {
                 // Get one string from the user, insert it into the tree,
                 // and print some information about the tree.  Exit if the
