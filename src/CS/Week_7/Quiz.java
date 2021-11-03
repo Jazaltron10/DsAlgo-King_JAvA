@@ -65,7 +65,10 @@ public class Quiz {
                 Question question_14 = new TrueFalseQuestion("Q14. Cristiano Ronaldo Played For Manchester United",
                                 "true");
                 question_14.check();
+                Question question_15 = new TrueFalseQuestion("Q14. Cristiano Ronaldo is the alltime goalscorer for the portugal national team",
+                                "true");
+                question_15.check();
 
-                MultipleChoiceQuestionWeekFour.showResults();
+                MultipleChoiceQuestion.showResults();
         }
 }
