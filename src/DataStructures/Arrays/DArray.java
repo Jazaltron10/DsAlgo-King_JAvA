@@ -248,18 +248,3 @@ public class DArray {
 
     }
 }
-/*
- * Section 3.8 - Introduction to Arrays
- * Section 4.3.5 - Array Parameters
- * Section 4.3.6 - Command-line Arguments
- * Section 5.1.4 - Arrays and Objects
- * Section 7.1 - Array Details (all)
- * Section 7.2.1 - Some Processing Examples
- * Section 7.2.2 - Some Standard Array Methods
- * Section 7.3 - ArrayList (all but 7.3.4)
- * Section 7.4 - Searching and Sorting (introduction)
- * Section 7.4.1 - Searching
- * Section 7.4.2 - Association Lists
- * Section 7.5 - Two-dimensional Arrays (introduction)
- * Section 7.5.1 - The Truth about 2D Arrays
- */
