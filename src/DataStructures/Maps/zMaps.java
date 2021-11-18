@@ -77,7 +77,7 @@ public class zMaps {
         System.out.println(dictionary);
         
         System.out.println("\n");
-        // RandomStringGenerator();
+        RandomStringGenerator();
         
         System.out.println("\n");
         Map<Character,Integer> dict;
