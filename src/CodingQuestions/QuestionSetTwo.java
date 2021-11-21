@@ -90,8 +90,10 @@ public class QuestionSetTwo {
                 rulenc = rulenc + prerulenc.repeat(multi) + " ";
                 // rulenc = rulenc.repeat(multi);
             } else if (value > 9) {
+                int muly = value / 9;
                 int additional = value % 9;
-                rulenc = rulenc + (value - additional) + c + additional + c + " ";
+                String prerulenca = "" + (9) + c;
+                rulenc = rulenc + prerulenca.repeat(muly) + additional + c + " ";
             }
         }
         System.out.printf("%n %s", rulenc);
@@ -101,7 +103,7 @@ public class QuestionSetTwo {
 
     public static void main(String[] args) {
         // Q1
-        permutation("den");
+        // permutation("den");
         // Q2
         int indexOfChar = First_Non_Repeating_Character("createcr");
         if (indexOfChar == -1) {
@@ -110,9 +112,17 @@ public class QuestionSetTwo {
             System.out.println("The index of the first non repeating character is " + indexOfChar);
         }
         // Q3
-        // String Q3 = Run_Length_Encoding("AAAAAAAAAAAAABBCCCCDD");
-        String Q4 = Run_Length_Encoding(
-                "AAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBCCCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDFFFFFFFFFFFFFEEEEEEEEEE");
-
+        String Q3 = Run_Length_Encoding("AAAAAAAAAAAAABBCCCCDD");
+            System.out.println("\n\n" + Q3);
+        String Q3b = Run_Length_Encoding(
+            "AAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBCCCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDFFFFFFFFFFFFFEEEEEEEEEE");
+            System.out.println("\n\n" + Q3b);
+            String Q3c = Run_Length_Encoding(
+                ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;");
+                System.out.println("\n\n" + Q3c);
+            String Q3d = Run_Length_Encoding(
+                    "AAAAAAAAAAAAAAAAAABBBBBBBBBBBBeeeeeeeeeeBBCFFFFFFFCCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDFFFFFFFFFFFFFEEEEEEEEEE");
+                    System.out.println("\n\n" + Q3d);
+                
     }
 }
