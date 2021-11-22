@@ -19,7 +19,7 @@ public class QuestionSetTwo {
 
     static int First_Non_Repeating_Character(String word) {
         /*
-         * Write a function that takes in a string of lowercase English-alpahbet letters
+         * Write a function that takes in a string of lowercase English-alphabet letters
          * and returns the index of the string's first non-repeating character. The
          * first non-repeating character is the first character in a string that occurs
          * only once. if the input string doesn't have any non-repeating characters,your
@@ -117,12 +117,12 @@ public class QuestionSetTwo {
         String Q3b = Run_Length_Encoding(
             "AAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBCCCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDFFFFFFFFFFFFFEEEEEEEEEE");
             System.out.println("\n\n" + Q3b);
-            String Q3c = Run_Length_Encoding(
-                ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;");
-                System.out.println("\n\n" + Q3c);
-            String Q3d = Run_Length_Encoding(
-                    "AAAAAAAAAAAAAAAAAABBBBBBBBBBBBeeeeeeeeeeBBCFFFFFFFCCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDFFFFFFFFFFFFFEEEEEEEEEE");
-                    System.out.println("\n\n" + Q3d);
+        String Q3c = Run_Length_Encoding(
+            ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;");
+            System.out.println("\n\n" + Q3c);
+        String Q3d = Run_Length_Encoding(
+            "AAAAAAAAAAAAAAAAAABBBBBBBBBBBBeeeeeeeeeeBBCFFFFFFFCCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDFFFFFFFFFFFFFEEEEEEEEEE");
+            System.out.println("\n\n" + Q3d);
                 
     }
 }

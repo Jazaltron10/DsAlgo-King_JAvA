@@ -153,3 +153,28 @@ public class Freestyle_1 {
 
     }
 }
+
+
+
+
+
+// public static String findSubstring(String s, int k) {
+//     String notfound = "Not found!";
+//     int fad = 0;
+//     for(int i = 0 ; i < s.length() - k+1; i++){
+//     int count = 0;
+//         String name = s.substring(i, i+k);
+//         for(int j = 0; j < k; j++ ){
+//             if (name.charAt(j) == 'a' || name.charAt(j) == 'e' ||name.charAt(j) == 'i' || name.charAt(j) == 'o' ||name.charAt(j) =='u'){
+//                 count++;
+//             }
+//         }
+//         if(fad < count){
+//             fad = count;
+//             notfound = name;
+//         }
+        
+//     }
+//     return notfound;
+
+// }
