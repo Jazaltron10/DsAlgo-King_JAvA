@@ -1,5 +1,5 @@
 // package Freestyles;
-import java.util.*;
+// import java.util.*;
 public class FreeStyle_6_Names {
     static void Workingstrings() {
 
