@@ -36,24 +36,14 @@ public class QuestionSetThree {
 }
 
 public static int findtheRank(int[][] glist, int rank ){
-    // glist[][];
     int [] totalScore = new int[glist.length];
-    int i = 0;
-    while(i<glist.length){
-        totalScore[0] += glist[0][i];
-        i++;
-    }
-    int j = 0;
-    while(j<glist.length){
-        totalScore[1] += glist[1][j];
-        j++;
-    }
-    int k = 0;
-    while(k<glist.length){
-        totalScore[2] += glist[2][k];
-        k++;
+    for (int i = 0; i < glist.length; i++) {
+        for (int j = 0; j < glist[i].length; j++) {
+            totalScore[i] += glist[i][j];
+        }
     }
     Integer[] temparr;
+    // temparr = Arrays.copyOf(totalScore, totalScore.length);
     temparr = new Integer[totalScore.length];
     for(int l = 0; l < totalScore.length; l++){
         temparr[l] = totalScore[l];
@@ -72,9 +62,11 @@ public static int findtheRank(int[][] glist, int rank ){
 public static void main(String[] args) {
     // String res = findSubstring("azerdii", 3);
     // System.out.println(res);
+
+    // Math.floor(Math.random()*(10-1+1)+1);
     Random rand = new Random();
-    int k = 3;//rand.nextInt(10);
-    int n = 3;//rand.nextInt(10);
+    int k = 5;//rand.nextInt(10);
+    int n = 5;//rand.nextInt(10);
     int[][]gradeList = new int[n][k];
     // System.out.println(gradeList.length);
     // System.out.println(Arrays.deepToString(gradeList));
@@ -107,8 +99,22 @@ public static void main(String[] args) {
 
 
 
-
-
+    //Brute force
+    // int i = 0;
+    // while(i<glist.length){
+    //     totalScore[0] += glist[0][i];
+    //     i++;
+    // }
+    // int j = 0;
+    // while(j<glist.length){
+    //     totalScore[1] += glist[1][j];
+    //     j++;
+    // }
+    // int k = 0;
+    // while(k<glist.length){
+    //     totalScore[2] += glist[2][k];
+    //     k++;
+    // }
 
 
 
