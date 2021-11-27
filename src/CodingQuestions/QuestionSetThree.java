@@ -59,6 +59,22 @@ public static int findtheRank(int[][] glist, int rank ){
 
     return S;
 }
+public static boolean isValidSubsequence(List<Integer> array, List<Integer> sequence) {
+    // Write your code here.
+		int count = 0;
+		for(int c = 0 ; c < array.size();c++){
+				if (count == sequence.size()){
+					break;
+				}
+				if ((array.get(c) == sequence.get(count))){
+					count+=1;
+				}	
+		}
+		if (count == sequence.size()){
+			return true;
+		}
+    return false;
+}
 public static void main(String[] args) {
     // String res = findSubstring("azerdii", 3);
     // System.out.println(res);
@@ -80,6 +96,10 @@ public static void main(String[] args) {
     
     int resu = findtheRank(gradeList, 2);
     System.out.println("The index of the given rank is " + resu);
+
+
+    boolean resulto = isValidSubsequence(Arrays.asList(1,2,3,4,5), Arrays.asList(4,1));
+    System.out.println(resulto);
     }
 }
 
