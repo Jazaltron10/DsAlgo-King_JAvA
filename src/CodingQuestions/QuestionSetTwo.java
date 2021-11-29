@@ -25,18 +25,6 @@ public class QuestionSetTwo {
          * only once. if the input string doesn't have any non-repeating characters,your
          * function should return -1.
          */
-        // String str = "abacabad";
-        // int[] count = new int[26];
-        // for(int i = 0; i < str.length(); i++){
-        // count[str.charAt(i) - 'a']++;
-        // }
-        // for(int i = 0; i < str.length(); i++){
-        // if(count[str.charAt(i) - 'a'] == 1){
-        // System.out.println(str.charAt(i));
-        // break;
-        // }
-        // }
-
         Map<Character, Integer> dictionary = new HashMap<Character, Integer>();
         word = word.toLowerCase();
         // This is the histogram section

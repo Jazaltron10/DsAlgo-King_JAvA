@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class QuestionSetThree {
-
     public static String findSubstring(String s, int k) {
         String notfound = "Not found!";
         int res = 0;
@@ -76,6 +75,9 @@ public static boolean isValidSubsequence(List<Integer> array, List<Integer> sequ
     return false;
 }
 
+
+
+
 static Map<Character,Integer> histogram( String word){
     Map<Character,Integer> dictionary = new HashMap<>();
     word = word.toLowerCase();
@@ -141,33 +143,41 @@ static int thecommoner(String s1, String s2) {
     System.out.println(newS2);
     return count;
 }
-static int thecommoner2(String s1, String s2) {
-    int count = 0;
-    String newS1 ="";
-    String newS2 ="";
-    
-    for (int i = 0; i < s1.length(); i++) {
-        for(int j = 1; j < s1.length(); j++) {
-            if(s1.charAt(i) == s1.charAt(j)) {
-                break;
-            }
-            else if (s1.charAt(i) != s1.charAt(j) && s2.charAt(i) != s2.charAt(j)){
-                newS1 += s1.charAt(i);
-                newS2 += s2.charAt(i);
-            }
-        }
-    }
-    for(int i = 0; i < newS1.length(); i++) {
-        for(int j = 0; j < newS1.length(); j++) {
-            if (newS1.charAt(i) == newS2.charAt(j)){
-                count++;
-            }
-        }
-    }
-    System.out.println(newS1);
-    System.out.println(newS2);
-    return count;
+// Function to return the count of
+// valid indices pairs
+static int countPairs(String s1, int n1,
+						String s2, int n2)
+{
+
+    s1=s1.toLowerCase();
+    s2=s2.toLowerCase();
+	// To store the frequencies of characters
+	// of string s1 and s2
+	int []freq1 = new int[26];
+	int []freq2 = new int[26];
+	Arrays.fill(freq1, 0);
+	Arrays.fill(freq2, 0);
+
+	// To store the count of valid pairs
+	int i, count = 0;
+
+	// Update the frequencies of
+	// the characters of string s1
+	for (i = 0; i < n1; i++)
+		freq1[s1.charAt(i) - 'a']++;
+
+	// Update the frequencies of
+	// the characters of string s2
+	for (i = 0; i < n2; i++)
+		freq2[s2.charAt(i) - 'a']++;
+
+	// Find the count of valid pairs
+	for (i = 0; i < 26; i++)
+		count += (Math.min(freq1[i], freq2[i]));
+
+	return count;
 }
+
 public static void main(String[] args) {
     // String res = findSubstring("azerdii", 3);
     // System.out.println(res);
@@ -198,6 +208,13 @@ public static void main(String[] args) {
     // int las = thecommoner("BANANA", "NOHARAAA"); 
     int las = thecommoner("SHINCHAN", "NOHARAAA"); 
     System.out.println(las);
+
+
+    // String s1 = "SHINCHAN", s2 = "NOHARAAA";
+	// String s1 = "geeksforgeeks", s2 = "platformforgeeks";
+	String s1 = "harry", s2 = "sally";
+	int n1 = s1.length(), n2 = s2.length();
+	System.out.println(countPairs(s1, n1, s2, n2));
     }
 }
 
