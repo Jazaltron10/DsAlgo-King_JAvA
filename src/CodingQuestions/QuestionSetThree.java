@@ -75,6 +75,99 @@ public static boolean isValidSubsequence(List<Integer> array, List<Integer> sequ
 		}
     return false;
 }
+
+static Map<Character,Integer> histogram( String word){
+    Map<Character,Integer> dictionary = new HashMap<>();
+    word = word.toLowerCase();
+    for (int i = 0; i < word.length(); i++) {
+        // System.out.println("\n"+ c);
+        char c = word.charAt(i);
+        Integer value = dictionary.get(c); 
+        if(dictionary.containsKey(c)){
+            value += 1;
+            dictionary.put(c, value);
+        }else{
+            value = 1;
+            dictionary.put(c, value);
+        }
+    } 
+    // System.out.println(dictionary);
+    return dictionary;
+}
+public static int commonChild(String s1, String s2) {
+    
+    Map<Character, Integer> map1 = new HashMap<Character, Integer>();
+    Map<Character, Integer> map2 = new HashMap<Character, Integer>();
+    // Write your code here
+    map1 = histogram(s1);
+    map2 = histogram(s2);
+    
+    int count = 0;
+    for(char k : map1.keySet()) {
+        for(char l : map2.keySet()) {
+            if(k == l) {
+                count++;
+            }
+            // System.out.println(k+l);
+        }
+    }
+    return count;
+    }
+
+static int thecommoner(String s1, String s2) {
+    int count = 0;
+    String newS1 ="";
+    String newS2 ="";
+    
+    for (int i = 0; i < s1.length(); i++) {
+        for(int j = 1; j < s1.length(); j++) {
+            if(s1.charAt(i) == s1.charAt(j)) {
+                break;
+            }
+            else if (s1.charAt(i) != s1.charAt(j) && s2.charAt(i) != s2.charAt(j)){
+                newS1 += s1.charAt(i);
+                newS2 += s2.charAt(i);
+            }
+        }
+    }
+    for(int i = 0; i < newS1.length(); i++) {
+        for(int j = 0; j < newS1.length(); j++) {
+            if (newS1.charAt(i) == newS2.charAt(j)){
+                count++;
+            }
+        }
+    }
+    System.out.println(newS1);
+    System.out.println(newS2);
+    return count;
+}
+static int thecommoner2(String s1, String s2) {
+    int count = 0;
+    String newS1 ="";
+    String newS2 ="";
+    
+    for (int i = 0; i < s1.length(); i++) {
+        for(int j = 1; j < s1.length(); j++) {
+            if(s1.charAt(i) == s1.charAt(j)) {
+                break;
+            }
+            else if (s1.charAt(i) != s1.charAt(j) && s2.charAt(i) != s2.charAt(j)){
+                newS1 += s1.charAt(i);
+                newS2 += s2.charAt(i);
+            }
+        }
+    }
+    for(int i = 0; i < newS1.length(); i++) {
+        for(int j = 0; j < newS1.length(); j++) {
+            if (newS1.charAt(i) == newS2.charAt(j)){
+                count++;
+            }
+        }
+    }
+    System.out.println(newS1);
+    System.out.println(newS2);
+    return count;
+}
 public static void main(String[] args) {
     // String res = findSubstring("azerdii", 3);
     // System.out.println(res);
@@ -99,7 +192,12 @@ public static void main(String[] args) {
 
 
     boolean resulto = isValidSubsequence(Arrays.asList(1,2,3,4,5), Arrays.asList(4,1));
-    System.out.println(resulto);
+    System.out.println(resulto + "\n\n");
+    // int kas = commonChild("SHINCHAN", "NOHARAAA"); 
+    // System.out.println(kas);
+    // int las = thecommoner("BANANA", "NOHARAAA"); 
+    int las = thecommoner("SHINCHAN", "NOHARAAA"); 
+    System.out.println(las);
     }
 }
 

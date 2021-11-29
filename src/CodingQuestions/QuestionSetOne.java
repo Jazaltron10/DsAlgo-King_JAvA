@@ -105,14 +105,4 @@ public class QuestionSetOne {
             Boolean check_3 = palindromeTwo("abba");
             System.out.println(check_3);
         }
-
-
-        
-    //     static void totalsum(){
-    //         int sum = 0;
-    //         for (int i = 1; i < 10; i++){
-    //             sum +=i;
-    //             System.out.println(sum);
-    //         }
-    // }
 }

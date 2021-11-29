@@ -49,9 +49,9 @@ public class Grid {
         //     * The function is expected to return a LONG_INTEGER.
         //     * The function accepts STRING_ARRAY upRight as parameter.
         //     */
-       
+        
         //    public static long countMax(List<String> upRight) {
-        //        // Write your code here
+        //        Write your code here
         //        int length = upRight.size();
         //        int[][] twodgrid = new int[length][length];
         //        long count = 1;
@@ -74,4 +74,4 @@ public class Grid {
         //        }
         //        return count;
         //        }
-           
+        
