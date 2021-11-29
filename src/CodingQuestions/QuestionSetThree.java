@@ -141,6 +141,33 @@ static int thecommoner(String s1, String s2) {
     System.out.println(newS2);
     return count;
 }
+static int thecommoner2(String s1, String s2) {
+    int count = 0;
+    String newS1 ="";
+    String newS2 ="";
+    
+    for (int i = 0; i < s1.length(); i++) {
+        for(int j = 1; j < s1.length(); j++) {
+            if(s1.charAt(i) == s1.charAt(j)) {
+                break;
+            }
+            else if (s1.charAt(i) != s1.charAt(j) && s2.charAt(i) != s2.charAt(j)){
+                newS1 += s1.charAt(i);
+                newS2 += s2.charAt(i);
+            }
+        }
+    }
+    for(int i = 0; i < newS1.length(); i++) {
+        for(int j = 0; j < newS1.length(); j++) {
+            if (newS1.charAt(i) == newS2.charAt(j)){
+                count++;
+            }
+        }
+    }
+    System.out.println(newS1);
+    System.out.println(newS2);
+    return count;
+}
 public static void main(String[] args) {
     // String res = findSubstring("azerdii", 3);
     // System.out.println(res);
