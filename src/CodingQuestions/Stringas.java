@@ -15,6 +15,7 @@ public class Stringas {
             for (int j = 1; j <= n; j++) {
                 int temp = memo[j];
                 if (X[i - 1] == Y[j - 1]) {
+                    System.out.println(X[i - 1] + " " + Y[j - 1]);
                     memo[j] = prev + 1;
                 } else {
                     memo[j] = Math.max(memo[j], memo[j - 1]);
@@ -36,24 +37,24 @@ public class Stringas {
         sc.close();
 
 
-        // String s1 = "SHINCHAN";
-        // char [] cal = s1.toCharArray();
-        // System.out.println(cal[0]);
-        // System.out.println(0 + 'a');
-        // String bigletters = "";
-        // String small_letters = "";
+        String s3 = "SHINCHAN";
+        char [] cal = s3.toCharArray();
+        System.out.println(cal[0]);
+        System.out.println(0 + 'a');
+        String bigletters = "";
+        String small_letters = "";
 
-        // for (char c = 65; c <= 90; c++) {
-        //     bigletters += c + " ";
-        // }
-        // for (char d = 97; d <= 'z'; d++) {
-        //     small_letters += d + " ";
-        // }
+        for (char c = 65; c <= 90; c++) {
+            bigletters += c + " ";
+        }
+        for (char d = 97; d <= 'z'; d++) {
+            small_letters += d + " ";
+        }
 
-        // System.out.println(bigletters + "\n");
-        // System.out.println(small_letters);
-        // System.out.println(Math.max(20, 3));
-        // System.out.println(Math.min(20, 3));
-        // System.out.println((int) Math.floor(Math.random() * 3));
+        System.out.println(bigletters + "\n");
+        System.out.println(small_letters);
+        System.out.println(Math.max(20, 3));
+        System.out.println(Math.min(20, 3));
+        System.out.println((int) Math.floor(Math.random() * 3));
     }
 }
