@@ -13,6 +13,7 @@ public class Sort_2 {
         }
         return dp[s1.length()][s2.length()];
     }
+        
     public static void main(String[] args) {
         String[] k = new String[] { "1,44","3,4","5,63","5,6","3,2","4,3"};
         System.out.println(Arrays.toString(k));
@@ -36,5 +37,13 @@ public class Sort_2 {
             }
         }
 
+
+
+        // Scanner sc = new Scanner(System.in);
+        String s1 = "abcd";
+        String s2 = "abdc";
+        int result = commonChild(s1, s2);
+        System.out.println(result);
+        // sc.close();
     }
 }
