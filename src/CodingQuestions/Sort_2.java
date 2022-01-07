@@ -1,4 +1,7 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Sort_2 {
     public static int commonChild(String s1, String s2){
         int[][] dp = new int[s1.length()+1][s2.length()+1];
@@ -40,8 +43,8 @@ public class Sort_2 {
 
 
         // Scanner sc = new Scanner(System.in);
-        String s1 = "abcd";
-        String s2 = "abdc";
+        String s1 = "banana";
+        String s2 = "bangoan";
         int result = commonChild(s1, s2);
         System.out.println(result);
         // sc.close();

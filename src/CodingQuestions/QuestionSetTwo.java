@@ -88,7 +88,10 @@ public class QuestionSetTwo {
         // System.out.println("\n"+rulenc.getClass().getSimpleName());
         return rulenc;
     }
-
+    
+    static String Run_Length_Encoding_LossLess(String word) {
+        return "TRUE";    
+    }    
     public static void main(String[] args) {
         // Q1
         // permutation("den");
