@@ -36,7 +36,7 @@ public class QuestionSetOne {
         return -1;
     }
 
-    public static Boolean palindrome(String word){
+    public static boolean palindrome(String word){
         // This has O(n) time and O(n)space
         String rev = "";
         int j = word.length()-1;
@@ -58,7 +58,7 @@ public class QuestionSetOne {
         }
     }
         
-    public static Boolean palindromeTwo(String word){
+    public static boolean palindromeTwo(String word){
         // This has O(n) time and O(1) space
         int j = word.length()-1;
         for(int i = 0; i < word.length() ; i++, j--){
@@ -93,16 +93,16 @@ public class QuestionSetOne {
         
         
         // PALINDROME
-        Boolean check = palindrome("abcdcba");
+        boolean check = palindrome("abcdcba");
         System.out.println(check);
-        Boolean check_1 = palindrome("jonathan");
+        boolean check_1 = palindrome("jonathan");
         System.out.println(check_1);
         
         System.out.println("\n\n\n");
         
-        Boolean check_2 = palindromeTwo("jonathan");
+        boolean check_2 = palindromeTwo("jonathan");
         System.out.println(check_2);
-        Boolean check_3 = palindromeTwo("abba");
+        boolean check_3 = palindromeTwo("abba");
         System.out.println(check_3);
     }
 }

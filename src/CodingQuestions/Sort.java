@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.Map;
+import java.util.HashMap;
 
 public class Sort {
     static int[] largeSmall(Integer[] array){
@@ -42,6 +44,15 @@ public class Sort {
         System.out.println(Arrays.toString(array));
     }
 
+    static void characterCounter(){
+        String s = "Hello World";
+        Map <Character, Integer> dictionary = new HashMap<Character, Integer>();
+        for (char c : s.toCharArray()){
+            dictionary.put(c, dictionary.getOrDefault(c, 0) + 1);
+        }
+        System.out.println("\n\n\n"+dictionary);
+    }
+
     public static void main(String[] args) {
         Integer[] array = {109,302,34,4,55,36,17,86,29,10};
         System.out.println(Arrays.toString(array));
@@ -53,12 +64,22 @@ public class Sort {
         int S = Arrays.asList(array).indexOf(ind[1]);
         System.out.println(S);
 
+
+        Integer[] array2 = {8, 4, 6, 2, 6, 4, 7, 9, 5, 8};
+        Integer[] array3 = {9,5,4};
+        int []res = largeSmall(array2);
+        int []res3 = largeSmall(array3);
+        System.out.println("\n\n\n"+Arrays.toString(res));
+        System.out.println("\n\n\n"+Arrays.toString(res3));
+
+
         int num = ConsonountCount("aeroplanser");
         System.out.printf("%n%nThe total amount of consonants in the given word are %d\n\n",num);
         // String name = "james";
         // System.out.printf("%n%nThe name is %s",name.getClass().getName());
         
         ReverseArray();
+        characterCounter();
     }
     // System.out.println(theVariable.getClass().getName());
 }
@@ -133,3 +154,36 @@ public class Sort {
     //     return count;
     //     }
     // }
+
+
+
+
+
+
+
+    // int []count = new int[a.length];
+    // for(int i = 0; i < a .length; i++){
+    //     for(int j = i+1; j < a.length; j++){
+    //         if(a[i] == a[j]){
+    //             // System.out.println("\nDuplicate: " + a[i] + " at index " + i + "\n " + a[j] + " at index " + j);
+    //             count[i] = j;
+    //             // inc++;
+    //             // return a[i];
+    //         }
+    //     }
+    // }
+    // System.out.println("\n\n\nThe duplicates are: " + Arrays.toString(count)+" "+ count.length);
+    // int smallest = count[0];
+    // for (int b : count) {
+    //     if (b < smallest && b != 0) {
+    //         smallest = b;
+    //         System.out.println("\n\n\nsmallest: " + smallest);
+    //         return a[smallest];
+    //     }
+    //     else if (count.length == 2){
+    //         return a[count.length-1];
+    //     }else if(b == smallest && b != 0){
+    //         return a[smallest];
+    //     }
+    // }
+    // return -1;
