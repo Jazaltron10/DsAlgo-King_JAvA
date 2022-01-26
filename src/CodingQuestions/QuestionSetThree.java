@@ -172,7 +172,7 @@ public static void main(String[] args) {
 
 
     boolean resulto = isValidSubsequence(Arrays.asList(1,2,3,4,5), Arrays.asList(4,1));
-    System.out.println(resulto + "\n\n");
+    System.out.println(resulto + "\n\n\n\n\n\n");
     int kas = commonChild("SHINCHAN", "NOHARAAA"); 
     System.out.println(kas);
     // int las = thecommoner("BANANA", "NOHARAAA"); 
@@ -182,9 +182,9 @@ public static void main(String[] args) {
 
     // String s1 = "SHINCHAN", s2 = "NOHARAAA";
 	// String s1 = "geeksforgeeks", s2 = "platformforgeeks";
-	String s1 = "harry", s2 = "sally";
-	int n1 = s1.length(), n2 = s2.length();
-	System.out.println(countPairs(s1, n1, s2, n2));
+	// String s1 = "harry", s2 = "sally";
+	// int n1 = s1.length(), n2 = s2.length();
+	// System.out.println(countPairs(s1, n1, s2, n2));
     }
 }
 
