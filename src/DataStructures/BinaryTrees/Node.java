@@ -7,4 +7,6 @@ public class Node {
         this.data = data;
         left = right = null;
     }
+    
 }
+
