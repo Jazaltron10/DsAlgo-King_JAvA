@@ -2,7 +2,6 @@
 
 public class Quiz {
         public static void main(String[] args) {
-
                 Question question_1 = new MultipleChoiceQuestion(
                                 "Q1. Three people have won the World Cup as a player and as a coach. Mario Zagallo, Didier Deschamps an.. can you name the third?",
                                 " Vicente Del Bosque", " Duda", " Joachim Low", " Roberto Mancini", "Franz Beckenbauer",
