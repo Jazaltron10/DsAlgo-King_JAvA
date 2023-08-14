@@ -8,7 +8,7 @@ public class QuestionSetOne {
             for(int j = i + 1; j < array.length; j++){
                 sum = array[i] + array[j];
                 if (sum==targetSum){
-                    twonums[0] = array[i];
+                    twonums[0] ;= array[i];
                     twonums[1] = array[j];
                     return twonums;
                 }
