@@ -1,4 +1,4 @@
-import java.util.*;
+// import java.util.*;
 public class TimeSpaceThree {
     static int addMeUp(){
         int a = 26;
@@ -19,9 +19,9 @@ static void victony(){
 }
 
     public static void main(String[] args) {
-        System.out.println("Hello MotherFucking world !");
-        System.out.println("Hello MotherFucking Universe ! -.>" + (9 + 89) );
+        System.out.println("Hello world !");
+        System.out.println("Hello Universe ! -.>" + (9 + 89) );
         int ans = addMeUp();
-        System.out.println("The Fucking answers is whatever i fucking say it is  -> " + ans);
+        System.out.println("The answer -> " + ans);
     }
 }
