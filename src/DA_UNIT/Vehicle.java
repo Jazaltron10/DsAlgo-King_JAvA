@@ -31,6 +31,7 @@ public class Vehicle {
         Price = p;
     }
 
+    //This is a class method that gives information on the new arrivals
     public void arrival(String h, String s, String q) {
         Hp = h;
         Speed = s;
@@ -39,6 +40,7 @@ public class Vehicle {
                 + " and a topspeed of " + s + " it also has a torque of " + q);
     }
 
+    //This method provides info on the specification of any car object produced from this class
     public void specs() {
         System.out.println("\nThis is the " + Name + " " + Model + " And the specs of this vehicle are\nName :-> "
                 + Name + "\nModel :-> " + Model + "\nColor :-> " + Color + "\nType :-> " + Type + "\nYear :-> " + Year
