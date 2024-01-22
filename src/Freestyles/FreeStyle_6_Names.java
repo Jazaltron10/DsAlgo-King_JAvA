@@ -110,19 +110,20 @@ public class FreeStyle_6_Names {
         // Convert string numberAsString back to a number
         number = Integer.parseInt(numberAsString);
         System.out.println("Value of number is " + number);
-    
-    /* NOte this 
-    Integer boxedValue = Integer.valueOf(238);
-    String characterNumeric = boxedValue.toString();
 
-    String characterNumeric = "238";
-    Integer convertedValue = Integer.parseInt(characterNumeric);
-     */
+        /*
+         * NOte this
+         * Integer boxedValue = Integer.valueOf(238);
+         * String characterNumeric = boxedValue.toString();
+         * 
+         * String characterNumeric = "238";
+         * Integer convertedValue = Integer.parseInt(characterNumeric);
+         */
     }
 
     public static void main(String[] args) {
         // for (int i = 0; i > 10; i++){
-        //     System.out.println("Hello");
+        // System.out.println("Hello");
         // }
 
         // Integer[] a = new Integer[10];
@@ -134,6 +135,6 @@ public class FreeStyle_6_Names {
         // ReplaceCharInString();
         GetPartOfString();
         // NumStringConversion();
-    
+
     }
 }

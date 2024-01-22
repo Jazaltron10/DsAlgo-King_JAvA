@@ -88,10 +88,11 @@ public class QuestionSetTwo {
         // System.out.println("\n"+rulenc.getClass().getSimpleName());
         return rulenc;
     }
-    
+
     static String Run_Length_Encoding_LossLess(String word) {
-        return "TRUE";    
-    }    
+        return "TRUE";
+    }
+
     public static void main(String[] args) {
         // Q1
         // permutation("den");
@@ -104,16 +105,16 @@ public class QuestionSetTwo {
         }
         // Q3
         String Q3 = Run_Length_Encoding("AAAAAAAAAAAAABBCCCCDD");
-            System.out.println("\n\n" + Q3);
+        System.out.println("\n\n" + Q3);
         String Q3b = Run_Length_Encoding(
-            "AAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBCCCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDFFFFFFFFFFFFFEEEEEEEEEE");
-            System.out.println("\n\n" + Q3b);
+                "AAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBCCCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDFFFFFFFFFFFFFEEEEEEEEEE");
+        System.out.println("\n\n" + Q3b);
         String Q3c = Run_Length_Encoding(
-            ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;");
-            System.out.println("\n\n" + Q3c);
+                ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;");
+        System.out.println("\n\n" + Q3c);
         String Q3d = Run_Length_Encoding(
-            "AAAAAAAAAAAAAAAAAABBBBBBBBBBBBeeeeeeeeeeBBCFFFFFFFCCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDFFFFFFFFFFFFFEEEEEEEEEE");
-            System.out.println("\n\n" + Q3d);
-                
+                "AAAAAAAAAAAAAAAAAABBBBBBBBBBBBeeeeeeeeeeBBCFFFFFFFCCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDFFFFFFFFFFFFFEEEEEEEEEE");
+        System.out.println("\n\n" + Q3d);
+
     }
 }

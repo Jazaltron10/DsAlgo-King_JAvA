@@ -30,15 +30,16 @@ public class Stringas {
     // Driver code
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Please input the first string here -->-:");
         String s1 = sc.next();
+        System.out.println("Please input the second string here -->-:");
         String s2 = sc.next();
         int result = commonChild(s1, s2);
         System.out.println(result);
         sc.close();
 
-
         String s3 = "SHINCHAN";
-        char [] cal = s3.toCharArray();
+        char[] cal = s3.toCharArray();
         System.out.println(cal[0]);
         System.out.println(0 + 'a');
         String bigletters = "";
